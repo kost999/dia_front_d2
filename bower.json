@@ -1,0 +1,22 @@
+{
+  "name": "kdx",
+  "description": "kdx gulp",
+  "main": "",
+  "authors": [
+    "kdx"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fancybox": "^3.1.20",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.6.0"
+  }
+}

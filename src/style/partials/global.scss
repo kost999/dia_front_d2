@@ -1,0 +1,45 @@
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header,
+.header {
+  background: rgba(255, 255, 255, 0.84);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer,
+.footer {
+  background-color: #43c7b6;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__contacts {
+  display: flex;
+}
+
+.footer__address {
+  margin-right: 5px;
+}

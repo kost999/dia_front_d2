@@ -1,0 +1,104 @@
+.jumbotron_news {
+  height: 360px;
+  background-image: url(../../img/jumbo-articles.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & h1 {
+    font-size: 52px;
+    margin-bottom: 0;
+    margin-top: 50px;
+    color: #ffffff;
+  }
+}
+
+.articles-list {
+  margin-top: 50px;
+
+  &__load-more {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    flex: 1 1 auto;
+    margin-bottom: 40px;
+    border: 1px solid #d8d8d8;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.article {
+
+  &__date {
+    position: absolute;
+    top: 0;
+    left: 4%;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin: 0;
+
+  }
+
+  &__image {
+
+    & img {
+      display: block;
+    }
+  }
+
+  &__content {
+    padding: 7.5%;
+    padding-left: 20%;
+    position: relative;
+  }
+
+  &__message {
+    font-size: 14px;
+  }
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    content: '';
+    width: 2px;
+    height: 80%;
+    position: absolute;
+    right: -12%;
+    top: 14%;
+    background-color: #c9c9c9;
+  }
+
+  &__day {
+    font-size: 28px;
+    line-height: 1.25;
+    color: #43c7b6;
+  }
+
+  &__month {
+    font-size: 16px;
+    line-height: 1.25;
+    color: #c9c9c9;
+  }
+}
