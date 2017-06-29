@@ -1,0 +1,28 @@
+.article-full {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 80px;
+
+  &__slider {
+    flex: 1 1 50%;
+    margin-right: 40px;
+
+    & img {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex: 1 1 50%;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 24px;
+    padding-left: 60px;
+  }
+
+  &__date {
+    position: absolute;
+  }
+}
