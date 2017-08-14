@@ -1,0 +1,38 @@
+.jumbotron {
+  background-color: #f0f0f0;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0, .4);
+  }
+
+  &__content {
+    color: #fff;
+    position: relative;
+  }
+
+  &__message {
+    margin-bottom: 2rem;
+  }
+
+  &__certificates {
+    padding: 2rem 0 1rem;
+  }
+}
+
+.jumbotron_clinic {
+  padding: 2rem 0 5rem;
+  background-image: url(../img/jumbo-clinic.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

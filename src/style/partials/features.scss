@@ -1,0 +1,43 @@
+.features {
+  display: flex;
+  padding: 8rem 0;
+
+  &__item {
+    width: 25%;
+    text-align: center;
+  }
+}
+
+.feature {
+
+  &__icon {
+    width: 22.5rem;
+    height: 22.5rem;
+    background-color: #43c7b6;
+    border-radius: 50%;
+
+    & .icon {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      &.icon-parodontology {
+        background-image: url(../img/icons/icon-paradontology.png);
+      }
+
+      &.icon-hygiene {
+        background-image: url(../img/icons/icon-hygiene.png);
+      }
+      
+      &.icon-implant {
+        background-image: url(../img/icons/icon-implant.png);
+      }
+      
+      &.icon-tooth {
+        background-image: url(../img/icons/icon-tooth.png);
+      }
+    }
+  }
+}
