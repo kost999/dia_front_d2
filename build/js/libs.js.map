@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["libs.js"],"sourcesContent":["@@include('../../bower_components/jquery/dist/jquery.min.js')\r\n@@include('../../bower_components/fancybox/dist/jquery.fancybox.min.js')\r\n@@include('../../bower_components/slick-carousel/slick/slick.min.js')"],"file":"libs.js"}
