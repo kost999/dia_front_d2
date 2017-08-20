@@ -36,3 +36,17 @@
   background-position: center center;
   background-size: cover;
 }
+
+.jumbotron_index {
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+  background-image: url(../img/jumbo-index.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &::before {
+    content: normal;
+  }
+}

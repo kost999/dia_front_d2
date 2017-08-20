@@ -920,6 +920,13 @@ header,
   background: rgba(255, 255, 255, 0.84);
   width: 100%; }
 
+.index header,
+.index .header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 1; }
+
 footer,
 .footer {
   background-color: #43c7b6;
@@ -1044,6 +1051,52 @@ img {
   .navigation__phone {
     margin-left: 25px; }
 
+.menu-toggle {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #43c7b6;
+  padding: 1rem;
+  -ms-flex-align: center;
+      align-items: center; }
+  .menu-toggle__icon {
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: #43c7b6;
+    position: relative; }
+    .menu-toggle__icon::before, .menu-toggle__icon::after {
+      content: '';
+      display: block;
+      height: 0.2rem;
+      width: 100%;
+      background-color: #43c7b6;
+      position: absolute; }
+    .menu-toggle__icon::before {
+      top: -1rem; }
+    .menu-toggle__icon::after {
+      bottom: -1rem; }
+  .menu-toggle__icon.open {
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background-color: transparent;
+    position: relative; }
+    .menu-toggle__icon.open::before, .menu-toggle__icon.open::after {
+      content: '';
+      display: block;
+      height: 0.2rem;
+      width: 100%;
+      background-color: #43c7b6;
+      position: absolute;
+      transition: all .3s ease; }
+    .menu-toggle__icon.open::before {
+      top: 0;
+      transform: rotate(45deg); }
+    .menu-toggle__icon.open::after {
+      bottom: 0;
+      transform: rotate(-45deg); }
+
 .phone {
   color: #000000; }
 
@@ -1133,6 +1186,19 @@ img {
   background-position: center center;
   background-size: cover; }
 
+.jumbotron_index {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  height: 100vh;
+  background-image: url(../img/jumbo-index.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  .jumbotron_index::before {
+    content: normal; }
+
 .certificates-block__certificates {
   display: -ms-flexbox;
   display: flex; }
@@ -1153,26 +1219,54 @@ img {
     width: 25%;
     text-align: center; }
 
-.feature__icon {
+.features__icon {
   width: 22.5rem;
   height: 22.5rem;
   background-color: #43c7b6;
   border-radius: 50%; }
-  .feature__icon .icon {
+  .features__icon .icon {
     display: block;
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center center; }
-    .feature__icon .icon.icon-parodontology {
+    .features__icon .icon.icon-parodontology {
       background-image: url(../img/icons/icon-paradontology.png); }
-    .feature__icon .icon.icon-hygiene {
+    .features__icon .icon.icon-hygiene {
       background-image: url(../img/icons/icon-hygiene.png); }
-    .feature__icon .icon.icon-implant {
+    .features__icon .icon.icon-implant {
       background-image: url(../img/icons/icon-implant.png); }
-    .feature__icon .icon.icon-tooth {
+    .features__icon .icon.icon-tooth {
       background-image: url(../img/icons/icon-tooth.png); }
-    @media (max-width: 700px) and (min-width: 480px) {
+
+.features-wrapper {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.89)); }
+
+.ind-features {
+  color: #ffffff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 4rem 0; }
+  .ind-features__item {
+    display: -ms-flexbox;
+    display: flex;
+    width: 25%;
+    padding: 0 1rem; }
+  .ind-features__icon {
+    padding-top: 2rem;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 3rem; }
+  .ind-features__title {
+    font-size: 2rem; }
+  .ind-features__message {
+    font-size: 1.4rem; }
+  @media (max-width: 700px) and (min-width: 480px) {
     .grid__col[class*="grid__col--m-"] {
       display: inline-block;
       margin-right: -.24em; }
@@ -1186,13 +1280,13 @@ img {
       width: 25%; }
     .grid__col.grid__col--m-3-of-4 {
       width: 75%; } }
-    @media (max-width: 700px) {
+  @media (max-width: 700px) {
     .grid__col {
       display: block;
       margin-left: 0;
       margin-right: 0;
       width: auto; } }
-    @media (max-width: 480px) {
+  @media (max-width: 480px) {
     .grid__col[class*="grid__col--s-"] {
       display: inline-block;
       margin-right: -.24em; }
@@ -1206,3 +1300,81 @@ img {
       width: 25%; }
     .grid__col.grid__col--s-3-of-4 {
       width: 75%; } }
+  @media (max-width: 768px) {
+    .index header,
+    .index .header {
+      background: white;
+      position: static; }
+    .navigation {
+      position: relative;
+      padding: 1rem 0; }
+      .navigation__phone {
+        display: none; }
+    .menu-toggle {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+    .slogan {
+      display: none; }
+    .main-navigation {
+      display: none;
+      height: 0;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      position: absolute;
+      z-index: 1;
+      width: calc(100% + 4rem);
+      background-color: #fff;
+      top: 100%;
+      left: -2rem;
+      text-align: center;
+      padding: 0.5rem 0 1rem;
+      transition: all .3s ease; }
+      .main-navigation::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #43c7b6;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .3s ease; }
+      .main-navigation.open {
+        display: -ms-flexbox;
+        display: flex;
+        height: auto; }
+        .main-navigation.open::before {
+          width: calc(100% - 4rem);
+          top: 0; }
+      .main-navigation__link {
+        display: block;
+        padding: 1rem 0; } }
+  @media (max-width: 1024px) {
+    .slogan {
+      text-transform: none; }
+      .main-navigation__link {
+        text-transform: none; }
+      .ind-features__item {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: center;
+            align-items: center;
+        text-align: center; }
+      .ind-features__icon {
+        height: 8rem;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        margin-right: 0;
+        padding-top: 0; } }
+  @media (max-width: 1280px) {
+      .ind-features__icon {
+        width: 5rem; } }

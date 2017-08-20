@@ -1,51 +1,60 @@
-@@include('./template/pagetop.html')
+@@include('./template/pagetop.html', {"title":"ДИАДЕНТ","class":"index"})
 @@include('./template/header.html')
 
 <main class="main">
   <div class="jumbotron jumbotron_index">
-    <div class="container">
-      <h1 class="jumbotron__title">Клиника</h1>
-      <div class="features">
-        <div class="features__item">
-          <div class="feature__icon">
-            <i class="icon icon-parodontology"></i>
+    <div class="features-wrapper">
+      <div class="container">
+        <div class="ind-features">
+          <div class="ind-features__item">
+            <div class="ind-features__icon">
+              <img src="img/icons/icon-paradontology.png" alt="" width="62" height="80">
+            </div>
+            <div class="ind-features__content">
+              <div class="ind-features__title">Пародонтология</div>
+              <p class="ind-features__message">
+                Это раздел стоматологии, занимающийся изучением причин возникновения, развития, клинической картины болезней пародонта, а также разработкой методов лечения и профилактики.
+              </p>
+            </div>
           </div>
-          <div class="feature__title">Пародонтология</div>
-          <p class="feature__message">
-            Это раздел стоматологии, занимающийся изучением причин возникновения, развития, клинической картины болезней пародонта, а также разработкой методов лечения и профилактики.
-          </p>
-        </div>
-        <div class="features__item">
-          <div class="feature__icon">
-            <i class="icon icon-hygiene"></i>
+          <div class="ind-features__item">
+            <div class="ind-features__icon">
+              <img src="img/icons/icon-hygiene.png" alt="" width="80" height="80">
+            </div>
+            <div class="ind-features__content">
+              <div class="ind-features__title">Отбеливание зубов</div>
+              <p class="ind-features__message">
+                Профессиональное отбеливание зубов в нашей клинике — это лучший способ сделать свою улыбку ослепительно белой.
+                Наши специалисты имеют отличную квалификацию в этой области!
+              </p>
+            </div>
           </div>
-          <div class="feature__title">Отбеливание зубов</div>
-          <p class="feature__message">
-            Профессиональное отбеливание зубов в нашей клинике — это лучший способ сделать свою улыбку ослепительно белой.
-            Наши специалисты имеют отличную квалификацию в этой области!
-          </p>
-        </div>
-        <div class="features__item">
-          <div class="feature__icon">
-            <i class="icon icon-tooth"></i>
+          <div class="ind-features__item">
+            <div class="ind-features__icon">
+              <img src="img/icons/icon-paradontology.png" alt="" width="60" height="80">
+            </div>
+            <div class="ind-features__content">
+              <div class="ind-features__title">Ортодонтия</div>
+              <p class="ind-features__message">
+                90% людей имеют неправильный прикус, из них более 50% нуждаются именно
+                в ортодонтическом лечении.
+                И не только из эстетических соображений. Приходите к нам!
+              </p>
+            </div>
           </div>
-          <div class="feature__title">Ортодонтия</div>
-          <p class="feature__message">
-            90% людей имеют неправильный прикус, из них более 50% нуждаются именно
-            в ортодонтическом лечении.
-            И не только из эстетических соображений. Приходите к нам!
-          </p>
-        </div>
-        <div class="features__item">
-          <div class="feature__icon">
-            <i class="icon icon-implant"></i>
+          <div class="ind-features__item">
+            <div class="ind-features__icon">
+              <img src="img/icons/icon-prot.png" alt="" width="101" height="40">
+            </div>
+            <div class="ind-features__content">
+              <div class="ind-features__title">Протезирование</div>
+              <p class="ind-features__message">
+                Изготовление зубных протезов
+                в нашей клинике производится под заказ, с учетом пожеланий
+                и особенностей каждого пациента. Ждем Вас!
+              </p>
+            </div>
           </div>
-          <div class="feature__title">Протезирование</div>
-          <p class="feature__message">
-            Изготовление зубных протезов
-            в нашей клинике производится под заказ, с учетом пожеланий
-            и особенностей каждого пациента. Ждем Вас!
-          </p>
         </div>
       </div>
     </div>

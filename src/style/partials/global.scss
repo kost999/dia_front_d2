@@ -25,6 +25,18 @@ header,
   width: 100%;
 }
 
+.index header,
+.index .header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  @include mobile {
+    background: rgba(255, 255, 255, 1);
+    position: static;
+  }
+}
+
 footer,
 .footer {
   background-color: #43c7b6;

@@ -8,7 +8,7 @@
   }
 }
 
-.feature {
+.features {
 
   &__icon {
     width: 22.5rem;
@@ -39,5 +39,55 @@
         background-image: url(../img/icons/icon-tooth.png);
       }
     }
+  }
+}
+
+.features-wrapper {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, .89));
+}
+
+.ind-features {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0;
+
+  &__item {
+    display: flex;
+    width: 25%;
+    padding: 0 1rem;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    padding-top: 2rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 3rem;
+    @include desktop {
+      width: 5rem;
+    }
+    @include tablet {
+      height: 8rem;
+      flex-grow: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__message {
+    font-size: 1.4rem;
   }
 }
