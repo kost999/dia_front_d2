@@ -16,3 +16,29 @@
     margin-right: 3rem;
   }
 }
+
+.doctor-preview .certificates-block {
+  &__certificate {
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 2.5rem;
+    &::before {
+      content: '';
+      width: 3px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #43c7b6;
+    }
+  }
+}

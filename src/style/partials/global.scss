@@ -11,6 +11,7 @@ body {
   font-family: $main-font;
   font-size: 1.6rem;
   line-height: 1.25;
+  color: #353535;
 }
 
 .container {
@@ -23,14 +24,15 @@ header,
 .header {
   background: rgba(255, 255, 255, 0.84);
   width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 
 .index header,
 .index .header {
   background-color: transparent;
-  position: absolute;
-  top: 0;
-  z-index: 1;
+
   @include mobile {
     background: rgba(255, 255, 255, 1);
     position: static;

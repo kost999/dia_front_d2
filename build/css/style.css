@@ -908,7 +908,8 @@ body {
 body {
   font-family: "open_sans", sans-serif;
   font-size: 1.6rem;
-  line-height: 1.25; }
+  line-height: 1.25;
+  color: #353535; }
 
 .container {
   max-width: 1200px;
@@ -918,14 +919,14 @@ body {
 header,
 .header {
   background: rgba(255, 255, 255, 0.84);
-  width: 100%; }
-
-.index header,
-.index .header {
-  background-color: transparent;
+  width: 100%;
   position: absolute;
   top: 0;
   z-index: 1; }
+
+.index header,
+.index .header {
+  background-color: transparent; }
 
 footer,
 .footer {
@@ -1199,6 +1200,25 @@ img {
   .jumbotron_index::before {
     content: normal; }
 
+.jumbotron_doctors {
+  padding: 2rem 0 5rem;
+  background-image: url(../img/jumbo-doctors.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 46.5rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .jumbotron_doctors .jumbotron__title {
+    margin-top: 9rem;
+    position: relative;
+    font-size: 7.2rem;
+    color: #ffffff; }
+
 .certificates-block__certificates {
   display: -ms-flexbox;
   display: flex; }
@@ -1210,6 +1230,25 @@ img {
 
 .certificates-block__certificate:not(:last-child) {
   margin-right: 3rem; }
+
+.doctor-preview .certificates-block__certificate img {
+  max-width: 100%;
+  height: auto; }
+
+.doctor-preview .certificates-block__title {
+  font-size: 2rem;
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 2.5rem; }
+  .doctor-preview .certificates-block__title::before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #43c7b6; }
 
 .features {
   display: -ms-flexbox;
@@ -1266,6 +1305,49 @@ img {
     font-size: 2rem; }
   .ind-features__message {
     font-size: 1.4rem; }
+
+.doctors-list {
+  padding: 7rem 0; }
+
+.doctor-preview {
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #d8d8d8; }
+  .doctor-preview:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .doctor-preview:not(:last-child) {
+    margin-bottom: 6rem; }
+  .doctor-preview__name {
+    font-size: 1.8rem;
+    margin-bottom: .5rem; }
+  .doctor-preview__specialty {
+    font-size: 1.4rem;
+    color: #c4c4c4; }
+  .doctor-preview__main {
+    float: left;
+    border-right: 1px solid #d8d8d8;
+    padding: 4rem;
+    text-align: center; }
+  .doctor-preview__content {
+    float: left;
+    padding: 4rem; }
+  .doctor-preview__image {
+    width: 23rem;
+    height: 23rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-bottom: 1.5rem; }
+  .doctor-preview__intro {
+    font-size: 1.4rem;
+    margin-bottom: 3.5rem; }
   @media (max-width: 700px) and (min-width: 480px) {
     .grid__col[class*="grid__col--m-"] {
       display: inline-block;
@@ -1351,7 +1433,28 @@ img {
           top: 0; }
       .main-navigation__link {
         display: block;
-        padding: 1rem 0; } }
+        padding: 1rem 0; }
+    .jumbotron_doctors {
+      height: 24rem; }
+    .doctors-list {
+      padding: 2rem 0; }
+    .doctor-preview {
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .doctor-preview:not(:last-child) {
+        margin-bottom: 2rem; }
+      .doctor-preview__main {
+        border-right: none;
+        border-bottom: 1px solid #d8d8d8;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: center;
+            align-items: center;
+        padding: 2.5rem 1rem; }
+      .doctor-preview__content {
+        padding: 2.5rem 1rem; } }
   @media (max-width: 1024px) {
     .slogan {
       text-transform: none; }

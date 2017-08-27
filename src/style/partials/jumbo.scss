@@ -50,3 +50,25 @@
     content: normal;
   }
 }
+
+.jumbotron_doctors {
+  padding: 2rem 0 5rem;
+  background-image: url(../img/jumbo-doctors.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 46.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile {
+    height: 24rem;
+  }
+
+  & .jumbotron__title {
+    margin-top: 9rem;
+    position: relative;
+    font-size: 7.2rem;
+    color: #ffffff;
+  }
+}

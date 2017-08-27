@@ -1,0 +1,71 @@
+.doctors-list {
+  padding: 7rem 0;
+  @include mobile {
+    padding: 2rem 0;
+  }
+}
+
+.doctor-preview {
+  @include clearfix;
+  display: flex;
+  border: 1px solid #d8d8d8;
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 6rem;
+    @include mobile {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+  }
+
+  &__specialty {
+    font-size: 1.4rem;
+    color: #c4c4c4;
+  }
+
+  &__main {
+    float: left;
+    border-right: 1px solid #d8d8d8;
+    padding: 4rem;
+    text-align: center;
+    @include mobile {
+      border-right: none;
+      border-bottom: 1px solid #d8d8d8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1rem;
+    }
+  }
+
+  &__content {
+    float: left;
+    padding: 4rem;
+    @include mobile {
+      padding: 2.5rem 1rem;
+    }
+  }
+
+  &__image {
+    width: 23rem;
+    height: 23rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__intro {
+    font-size: 1.4rem;
+    margin-bottom: 3.5rem;
+  }
+}

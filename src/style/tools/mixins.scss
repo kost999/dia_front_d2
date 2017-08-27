@@ -19,3 +19,11 @@ $desktop: 1280px;
     @content;
   }
 }
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
