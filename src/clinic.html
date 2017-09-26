@@ -1,4 +1,4 @@
-@@include('./template/pagetop.html', {"title":"Клиника","class":""})
+@@include('./template/pagetop.html', {"title":"Клиника","class":"", "script": ""})
 @@include('./template/header.html')
 <main class="main">
   <div class="jumbotron jumbotron_clinic">
@@ -7,16 +7,17 @@
         <h1 class="jumbotron__title">Клиника</h1>
         <p class="jumbotron__message">
           Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
-        </p>
-        <p class="jumbotron__message">
+          <br>
+          <br>
           Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
-        </p>
-        <p class="jumbotron__message">
+          <br>
+          <br>
           Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.
-        </p>
-        <p class="jumbotron__message">
+          <br>
+          <br>
           Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.
         </p>
+        <hr>
         <div class="jumbotron__certificates certificates-block">
           <div class="certificates-block__certificates">
             <div class="certificates-block__certificate">
@@ -36,93 +37,108 @@
   <div class="container">
     <div class="features">
       <div class="features__item feature">
-        <div class="feature__icon">
-          <i class="icon icon-parodontology"></i>
-        </div>
+        <a href="#">
+          <div class="feature__icon">
+            <i class="icon icon-parodontology"></i>
+          </div>
+        </a>
         <div class="feature__title">Пародонтология</div>
-        <div class="feature__link">Подробнее</div>
+        <a href="#" class="feature__link">Подробнее</a>
       </div>
       <div class="features__item feature">
-        <div class="feature__icon">
-          <i class="icon icon-hygiene"></i>
-        </div>
+        <a href="#">
+          <div class="feature__icon">
+            <i class="icon icon-hygiene"></i>
+          </div>
+        </a>
         <div class="feature__title">Профессиональная гигиена
           и отбеливание</div>
-        <div class="feature__link">Подробнее</div>
+        <a href="#" class="feature__link">Подробнее</a>
       </div>
       <div class="features__item feature">
-        <div class="feature__icon">
-          <i class="icon icon-implant"></i>
-        </div>
+        <a href="#">
+          <div class="feature__icon">
+            <i class="icon icon-implant"></i>
+          </div>
+        </a>
         <div class="feature__title">Имплантация</div>
-        <div class="feature__link">Подробнее</div>
+        <a href="#" class="feature__link">Подробнее</a>
       </div>
       <div class="features__item feature">
-        <div class="feature__icon">
-          <i class="icon icon-tooth"></i>
-        </div>
+        <a href="#">
+          <div class="feature__icon">
+            <i class="icon icon-tooth"></i>
+          </div>
+        </a>
         <div class="feature__title">Профессиональная гигиена
           и отбеливание</div>
-        <div class="feature__link">Подробнее</div>
+        <a href="#" class="feature__link">Подробнее</a>
       </div>
     </div>
-    <div class="video">
-      <div class="video__play">
-        <i class="video__play-icon icon icon-play"></i>
-        <div class="video__title">Смотреть видео</div>
-      </div>
-    </div>
-    <div class="gallery">
-      <div class="gallery__title">Галерея</div>
-      <div class="gallery__images masonry">
-        <div class="masonry__row">
-          <div class="masonry__column_3">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+  </div>
+  <div class="video">
+    <div class="video__cover"></div>
+    <!--<video class="video__container" controls>-->
+      <!--<source src="img/vid/AMEOW-ZING%2050%20Box%20Cat%20Maze!.webm" type="video/webm">-->
+      <!--<source src="img/vid/AMEOW-ZING%2050%20Box%20Cat%20Maze!.mp4" type="video/mp4">-->
+      <!--Ваш браузер не поддерживает данное видео :с-->
+    <!--</video>-->
+    <iframe id="video" class="video__container" src="" frameborder="0" allowfullscreen></iframe>
+    <a href="#" class="video__play">
+      <i class="video__play-icon icon icon-play"></i>
+      <div class="video__title">Смотреть видео</div>
+    </a>
+  </div>
+  <div class="gallery">
+    <div class="gallery__title">Галерея</div>
+    <div class="gallery__images masonry">
+      <div class="masonry__row">
+        <div class="masonry__column_3">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
-          <div class="masonry__column_1">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
-          <div class="masonry__column_1">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
         </div>
-        <div class="masonry__row">
-          <div class="masonry__column_2">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+        <div class="masonry__column_1">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
-          <div class="masonry__column_1">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+        </div>
+        <div class="masonry__column_1">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="masonry__row">
+        <div class="masonry__column_2">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+        </div>
+        <div class="masonry__column_1">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
         </div>
       </div>

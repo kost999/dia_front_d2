@@ -901,15 +901,29 @@ template {
 html {
   font-size: 62.5%; }
 
-html,
+html {
+  height: 100%; }
+
 body {
-  min-height: 100%; }
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 4.5rem; }
 
 body {
   font-family: "open_sans", sans-serif;
   font-size: 1.6rem;
   line-height: 1.25;
   color: #353535; }
+
+footer,
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.btn {
+  padding: 1.5rem 5rem; }
 
 .container {
   max-width: 1200px;
@@ -927,6 +941,9 @@ header,
 .index header,
 .index .header {
   background-color: transparent; }
+
+h1, .h1 {
+  font-size: 7.2rem; }
 
 footer,
 .footer {
@@ -957,6 +974,22 @@ img {
   .l_back:hover, .l_back:focus {
     text-decoration: none; }
 
+.icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+  .icon.icon-parodontology {
+    background-image: url(../img/icons/icon-paradontology.png); }
+  .icon.icon-hygiene {
+    background-image: url(../img/icons/icon-hygiene.png); }
+  .icon.icon-implant {
+    background-image: url(../img/icons/icon-implant.png); }
+  .icon.icon-tooth {
+    background-image: url(../img/icons/icon-tooth.png); }
+
 .jumbotron_news {
   height: 360px;
   background-image: url(../../img/jumbo-articles.jpg);
@@ -971,30 +1004,48 @@ img {
   -ms-flex-align: center;
       align-items: center; }
   .jumbotron_news h1 {
-    font-size: 52px;
+    font-size: 5.2rem;
     margin-bottom: 0;
-    margin-top: 50px;
+    margin-top: 5rem;
     color: #ffffff; }
 
 .articles-list {
-  margin-top: 50px; }
+  margin-top: 5rem; }
   .articles-list__load-more {
     display: block;
-    width: 200px;
+    width: 20rem;
     text-align: center;
+    font-size: 1.6rem;
+    color: #43c7b6;
     margin: 0 auto;
-    margin-bottom: 40px; }
+    margin-bottom: 4rem;
+    text-decoration: none; }
+    .articles-list__load-more::before {
+      content: '';
+      display: block;
+      width: 5.7rem;
+      height: 5.7rem;
+      background-image: url(../img/icons/icon-load.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      margin: 0 auto 1rem;
+      transition: all .3s ease-out; }
+    .articles-list__load-more:hover, .articles-list__load-more:focus {
+      text-decoration: underline; }
+      .articles-list__load-more:hover::before, .articles-list__load-more:focus::before {
+        transform: rotate(360deg); }
+  .articles-list__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
   .articles-list__item {
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
-    margin-bottom: 40px;
+    width: 21%;
+    margin: 0 2rem 4rem;
     border: 1px solid #d8d8d8; }
-    .articles-list__item:not(:last-child) {
-      margin-right: 40px; }
-
-.row {
-  display: -ms-flexbox;
-  display: flex; }
 
 .article__date {
   position: absolute;
@@ -1009,8 +1060,10 @@ img {
   display: block; }
 
 .article__content {
-  padding: 7.5%;
-  padding-left: 20%;
+  padding-top: .5rem;
+  padding-right: 3rem;
+  padding-left: 5.5rem;
+  padding-bottom: 2rem;
   position: relative; }
 
 .article__message {
@@ -1137,15 +1190,18 @@ img {
     .main-navigation__link:hover {
       color: #43c7b6; }
 
+.article .header {
+  position: relative; }
+
 .article-full {
   display: -ms-flexbox;
   display: flex;
-  margin-top: 60px;
-  margin-bottom: 80px; }
+  margin-top: 6rem;
+  margin-bottom: 8rem; }
   .article-full__slider {
     -ms-flex: 1 1 50%;
         flex: 1 1 50%;
-    margin-right: 40px; }
+    margin-right: 4rem; }
     .article-full__slider img {
       display: none; }
   .article-full__content {
@@ -1157,6 +1213,129 @@ img {
     padding-left: 60px; }
   .article-full__date {
     position: absolute; }
+
+.services__tab-controls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.services__tab-controls-item {
+  margin-right: 1rem;
+  margin-bottom: 1rem; }
+
+.services__tab-btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: .2rem .5rem;
+  border: 1px solid transparent; }
+  .services__tab-btn.active, .services__tab-btn:focus, .services__tab-btn:hover {
+    border-color: #fff; }
+
+.price-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .price-list__item {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-top: 1px solid #fff; }
+    .price-list__item:last-child {
+      border-bottom: 1px solid #fff; }
+  .price-list__item-title {
+    -ms-flex-order: 1;
+        order: 1;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .price-list__item-description {
+    width: 100%;
+    -ms-flex-order: 3;
+        order: 3; }
+  .price-list__price {
+    margin-left: auto;
+    -ms-flex-order: 2;
+        order: 2; }
+
+.currency::before {
+  content: '₽';
+  font-style: normal; }
+
+.tab-pane {
+  display: none;
+  animation: fadeEffect 1s; }
+  .tab-pane.active {
+    display: block; }
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.video {
+  position: relative;
+  height: 58.4rem; }
+  .video__container {
+    height: 100%;
+    width: 100%; }
+  .video__cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/video-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    .video__cover::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.15); }
+  .video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    text-decoration: none; }
+    .video__play:hover .video__title::after,
+    .video__play:focus .video__title::after {
+      content: ''; }
+  .video__title {
+    font-size: 4rem;
+    color: #ffffff;
+    position: relative; }
+    .video__title::after {
+      content: normal;
+      display: block;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -6px;
+      background-color: #fff; }
+  .video__play-icon {
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-image: url(../img/icons/icon-play.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
 
 .jumbotron {
   background-color: #f0f0f0;
@@ -1179,6 +1358,8 @@ img {
     margin-bottom: 2rem; }
   .jumbotron__certificates {
     padding: 2rem 0 1rem; }
+  .jumbotron__title {
+    position: relative; }
 
 .jumbotron_clinic {
   padding: 2rem 0 5rem;
@@ -1186,6 +1367,32 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
+  .jumbotron_clinic .jumbotron__content {
+    padding-top: 8rem; }
+  .jumbotron_clinic .jumbotron__title {
+    margin-bottom: 6rem;
+    position: relative;
+    padding-left: 1rem; }
+    .jumbotron_clinic .jumbotron__title::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: calc(60% - 2px);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #43c7b6; }
+
+.jumbotron_prices {
+  padding: 10rem 0 5rem;
+  background-image: url(../img/price.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff; }
+  .jumbotron_prices .container {
+    position: relative; }
 
 .jumbotron_index {
   display: -ms-flexbox;
@@ -1199,6 +1406,9 @@ img {
   background-size: cover; }
   .jumbotron_index::before {
     content: normal; }
+  .jumbotron_index .features-wrapper {
+    position: relative;
+    z-index: 1; }
 
 .jumbotron_doctors {
   padding: 2rem 0 5rem;
@@ -1256,27 +1466,27 @@ img {
   padding: 8rem 0; }
   .features__item {
     width: 25%;
-    text-align: center; }
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
 
-.features__icon {
+.feature__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem; }
+
+.feature__link {
+  margin-top: auto; }
+
+.feature__icon {
+  box-sizing: border-box;
   width: 22.5rem;
   height: 22.5rem;
+  padding: 5rem;
   background-color: #43c7b6;
-  border-radius: 50%; }
-  .features__icon .icon {
-    display: block;
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center; }
-    .features__icon .icon.icon-parodontology {
-      background-image: url(../img/icons/icon-paradontology.png); }
-    .features__icon .icon.icon-hygiene {
-      background-image: url(../img/icons/icon-hygiene.png); }
-    .features__icon .icon.icon-implant {
-      background-image: url(../img/icons/icon-implant.png); }
-    .features__icon .icon.icon-tooth {
-      background-image: url(../img/icons/icon-tooth.png); }
+  border-radius: 50%;
+  margin: 0 auto 3rem; }
 
 .features-wrapper {
   width: 100%;
@@ -1348,6 +1558,309 @@ img {
   .doctor-preview__intro {
     font-size: 1.4rem;
     margin-bottom: 3.5rem; }
+
+.about-us {
+  padding: 4rem 0;
+  margin-bottom: 2rem; }
+  .about-us__title {
+    font-size: 4.8rem;
+    text-align: center;
+    margin: 1rem 0 3rem; }
+  .about-us__content {
+    display: -ms-flexbox;
+    display: flex; }
+  .about-us__image {
+    width: 30%;
+    margin-right: 3rem;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto; }
+  .about-us__message {
+    display: -ms-flexbox;
+    display: flex; }
+    .about-us__message p,
+    .about-us__message ul {
+      width: 50%;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+      margin: 0; }
+    .about-us__message ul {
+      list-style: none; }
+    .about-us__message li {
+      margin-bottom: 1.5rem;
+      position: relative; }
+      .about-us__message li::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -2rem;
+        top: .7rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background-color: #43c7b6; }
+
+.index__video-container {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; }
+
+.index__video {
+  height: 100%; }
+
+.index .certificates-block__certificate {
+  max-height: none;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
+
+.index .certificates-block {
+  background: rgba(173, 173, 173, 0.28);
+  padding: 5rem 0 7rem; }
+
+.index .certificates-block__title {
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 3rem; }
+
+.our-doctors {
+  padding: 6rem 0; }
+
+.our-doctors__title {
+  font-size: 4.8rem;
+  text-align: center; }
+
+.our-doctors__doctors-list {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0; }
+  .our-doctors__doctors-list .doctor-preview {
+    margin-bottom: 0;
+    border: none; }
+    .our-doctors__doctors-list .doctor-preview__main {
+      border: none; }
+  .our-doctors__doctors-list .doctor-preview__image {
+    width: auto;
+    height: auto; }
+
+.recent-articles__title {
+  font-size: 4.8rem;
+  text-align: center; }
+
+.recent-articles__show-more {
+  display: block;
+  text-align: center; }
+
+.contacts {
+  display: -ms-flexbox;
+  display: flex; }
+  .contacts__map {
+    width: 66.6%;
+    min-height: 50rem; }
+  .contacts__main {
+    width: 33.4%;
+    padding: 4rem 9rem 4rem 4rem; }
+  .contacts__title {
+    font-size: 4.8rem;
+    text-align: center;
+    margin-bottom: 5rem; }
+  .contacts__info:not(:last-child) {
+    margin-bottom: 3rem; }
+  @media (max-width: 1280px) {
+    .feature__icon {
+      padding: 3rem;
+      width: 15rem;
+      height: 15rem; }
+      .ind-features__icon {
+        width: 5rem; }
+      .contacts__main {
+        padding: 4rem; } }
+  @media (max-width: 1024px) {
+    .slogan {
+      text-transform: none; }
+      .main-navigation__link {
+        text-transform: none; }
+      .jumbotron_clinic .jumbotron__title {
+        margin: 2rem 0 3rem; }
+      .ind-features__item {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: center;
+            align-items: center;
+        text-align: center; }
+      .ind-features__icon {
+        height: 8rem;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        margin-right: 0;
+        padding-top: 0; }
+      .about-us__message {
+        -ms-flex-direction: column;
+            flex-direction: column; }
+        .about-us__message p,
+        .about-us__message ul {
+          box-sizing: border-box;
+          width: 100%;
+          margin-bottom: 2rem; }
+    .contacts {
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .contacts__map {
+        width: 100%; }
+      .contacts__main {
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%; } }
+  @media (max-width: 768px) {
+    header,
+    .header {
+      background-color: #fff; }
+    .index header,
+    .index .header {
+      background: white;
+      position: static; }
+    h1, .h1 {
+      font-size: 5rem; }
+    .articles-list {
+      margin-top: 2rem; }
+        .articles-list__load-more::before {
+          width: 3rem;
+          height: 3rem; }
+      .articles-list__content {
+        -ms-flex-direction: column;
+            flex-direction: column; }
+      .articles-list__item {
+        width: auto;
+        margin: 0 0 2rem; }
+    .article__image img {
+      width: 100%; }
+    .article__content {
+      padding-left: 6.5rem; }
+    .navigation {
+      position: relative;
+      padding: 1rem 0;
+      background-color: #fff; }
+      .navigation__phone {
+        display: none; }
+    .menu-toggle {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+    .slogan {
+      display: none; }
+    .main-navigation {
+      -ms-flex-direction: column;
+          flex-direction: column;
+      position: absolute;
+      z-index: -1;
+      width: calc(100% + 4rem);
+      background-color: #fff;
+      top: 100%;
+      left: -2rem;
+      text-align: center;
+      padding: 0.5rem 0 1rem;
+      transform: translateY(-150%);
+      transition: all .3s ease; }
+      .main-navigation::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #43c7b6;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .3s ease; }
+      .main-navigation::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #43c7b6;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .3s ease; }
+      .main-navigation.open {
+        display: -ms-flexbox;
+        display: flex;
+        height: auto;
+        transform: translateY(0); }
+        .main-navigation.open::before {
+          width: calc(100% - 4rem);
+          top: 0; }
+        .main-navigation.open::after {
+          width: calc(100% - 4rem); }
+      .main-navigation__link {
+        display: block;
+        padding: 1rem 0; }
+    .article-full {
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .article-full__slider {
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+        margin-right: 0; }
+    .video {
+      height: calc(100vw * 0.56); }
+      .video__title {
+        display: none; }
+      .video__play-icon {
+        margin-bottom: 0; }
+      .jumbotron_clinic .jumbotron__title {
+        margin: 0; }
+    .jumbotron_doctors {
+      height: 24rem; }
+    .features {
+      padding: 4.5rem 0;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .features__item {
+        width: 100%;
+        margin-bottom: 4rem; }
+    .feature__title {
+      margin-bottom: 1rem; }
+    .feature__icon {
+      margin-bottom: 1.5rem; }
+    .doctors-list {
+      padding: 2rem 0; }
+    .doctor-preview {
+      -ms-flex-direction: column;
+          flex-direction: column; }
+      .doctor-preview:not(:last-child) {
+        margin-bottom: 2rem; }
+      .doctor-preview__main {
+        border-right: none;
+        border-bottom: 1px solid #d8d8d8;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: center;
+            align-items: center;
+        padding: 2.5rem 1rem; }
+      .doctor-preview__content {
+        padding: 2.5rem 1rem; }
+      .about-us__content {
+        -ms-flex-direction: column;
+            flex-direction: column; } }
   @media (max-width: 700px) and (min-width: 480px) {
     .grid__col[class*="grid__col--m-"] {
       display: inline-block;
@@ -1382,102 +1895,3 @@ img {
       width: 25%; }
     .grid__col.grid__col--s-3-of-4 {
       width: 75%; } }
-  @media (max-width: 768px) {
-    .index header,
-    .index .header {
-      background: white;
-      position: static; }
-    .navigation {
-      position: relative;
-      padding: 1rem 0; }
-      .navigation__phone {
-        display: none; }
-    .menu-toggle {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-negative: 0;
-          flex-shrink: 0; }
-    .slogan {
-      display: none; }
-    .main-navigation {
-      display: none;
-      height: 0;
-      -ms-flex-direction: column;
-          flex-direction: column;
-      position: absolute;
-      z-index: 1;
-      width: calc(100% + 4rem);
-      background-color: #fff;
-      top: 100%;
-      left: -2rem;
-      text-align: center;
-      padding: 0.5rem 0 1rem;
-      transition: all .3s ease; }
-      .main-navigation::before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 0;
-        height: 1px;
-        background-color: #43c7b6;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: all .3s ease; }
-      .main-navigation.open {
-        display: -ms-flexbox;
-        display: flex;
-        height: auto; }
-        .main-navigation.open::before {
-          width: calc(100% - 4rem);
-          top: 0; }
-      .main-navigation__link {
-        display: block;
-        padding: 1rem 0; }
-    .jumbotron_doctors {
-      height: 24rem; }
-    .doctors-list {
-      padding: 2rem 0; }
-    .doctor-preview {
-      -ms-flex-direction: column;
-          flex-direction: column; }
-      .doctor-preview:not(:last-child) {
-        margin-bottom: 2rem; }
-      .doctor-preview__main {
-        border-right: none;
-        border-bottom: 1px solid #d8d8d8;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-            flex-direction: column;
-        -ms-flex-align: center;
-            align-items: center;
-        padding: 2.5rem 1rem; }
-      .doctor-preview__content {
-        padding: 2.5rem 1rem; } }
-  @media (max-width: 1024px) {
-    .slogan {
-      text-transform: none; }
-      .main-navigation__link {
-        text-transform: none; }
-      .ind-features__item {
-        -ms-flex-direction: column;
-            flex-direction: column;
-        -ms-flex-align: center;
-            align-items: center;
-        text-align: center; }
-      .ind-features__icon {
-        height: 8rem;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-            align-items: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-        margin-right: 0;
-        padding-top: 0; } }
-  @media (max-width: 1280px) {
-      .ind-features__icon {
-        width: 5rem; } }

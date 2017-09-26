@@ -1,4 +1,4 @@
-@@include('./template/pagetop.html', {"title":"Статьи","class":""})
+@@include('./template/pagetop.html', {"title":"Статьи","class":"", "script": ""})
 @@include('./template/header.html')
 <main class="main">
   <div class="jumbotron jumbotron_news">
@@ -9,7 +9,7 @@
   <div class="container">
 
     <div class="articles-list">
-      <div class="row">
+      <div class="articles-list__content">
         <div class="articles-list__item article">
           <div class="article__image">
             <img src="img/article-list-item.jpg" alt="">
@@ -78,8 +78,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="articles-list__item article">
           <div class="article__image">
             <img src="img/article-list-item.jpg" alt="">

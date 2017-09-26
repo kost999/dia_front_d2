@@ -1,0 +1,87 @@
+.services {
+
+  &__tab-controls {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__tab-controls-item {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__tab-btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: .2rem .5rem;
+    border: 1px solid transparent;
+
+    &.active,
+    &:focus,
+    &:hover {
+      border-color: #fff;
+    }
+  }
+}
+
+.price-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #fff;
+
+    &:last-child {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &__item-title {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__item-description {
+    width: 100%;
+    order: 3;
+  }
+
+  &__price {
+    margin-left: auto;
+    order: 2;
+  }
+}
+
+.currency::before {
+  content: '₽';
+  font-style: normal;
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeEffect 1s;
+
+  &.active {
+    display: block;
+  }
+}
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

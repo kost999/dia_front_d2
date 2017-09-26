@@ -1,43 +1,52 @@
 .features {
   display: flex;
   padding: 8rem 0;
+  @include mobile() {
+    padding: 4.5rem 0;
+    flex-direction: column;
+  }
 
   &__item {
     width: 25%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    @include mobile() {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
   }
 }
 
-.features {
+.feature {
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    @include mobile() {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
 
   &__icon {
+    box-sizing: border-box;
     width: 22.5rem;
     height: 22.5rem;
+    padding: 5rem;
     background-color: #43c7b6;
     border-radius: 50%;
-
-    & .icon {
-      display: block;
-      height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-
-      &.icon-parodontology {
-        background-image: url(../img/icons/icon-paradontology.png);
-      }
-
-      &.icon-hygiene {
-        background-image: url(../img/icons/icon-hygiene.png);
-      }
-      
-      &.icon-implant {
-        background-image: url(../img/icons/icon-implant.png);
-      }
-      
-      &.icon-tooth {
-        background-image: url(../img/icons/icon-tooth.png);
-      }
+    margin: 0 auto 3rem;
+    @include desktop() {
+      padding: 3rem;
+      width: 15rem;
+      height: 15rem;
+    }
+    @include mobile() {
+      margin-bottom: 1.5rem;
     }
   }
 }

@@ -23,7 +23,8 @@ var gulp = require('gulp'),
   run = require('run-sequence'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
-  del = require('del');
+  del = require('del'),
+  sortCSSmq = require('sort-css-media-queries');
 
 // Paths
 
@@ -48,12 +49,12 @@ var path = {
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*',
     style: 'src/style/**/*.scss',
-    jsLibs: 'src/js/libs.js',
-    js: 'src/js/main.js'
+    jsLibs: 'src/js/**/*.js',
+    js: 'src/js/**/*.js'
   },
   clean: './build'
 };
-// Tasks for src/iframe/nissan
+
 gulp.task('html:build', function() {
   return gulp.src(path.src.html)
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error %>')}))
@@ -87,7 +88,7 @@ gulp.task('style:build', function() {
     .pipe(prefixer({browsers: ['last 2 versions', 'ie >= 10']}))
     .pipe(postcss([
       mqpacker({
-        sort: true
+        sort: sortCSSmq.desktopFirst
       })
     ]))
     .pipe(plumber.stop())
@@ -114,7 +115,7 @@ gulp.task('js:build', function() {
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error %>')}))
     .pipe(fileinclude())
     .pipe(plumber.stop())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
 });
@@ -126,9 +127,9 @@ gulp.task('build', function (fn) {
       'html:build',
       'img:build',
       'fonts:build',
-      'style:build',
       'jsLibs:build',
-      'js:build'
+      'js:build',
+      'style:build'
   ],
     fn
   );

@@ -1,0 +1,169 @@
+.about-us {
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 4.8rem;
+    text-align: center;
+    margin: 1rem 0 3rem;
+  }
+
+  &__content {
+    display: flex;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    width: 30%;
+    margin-right: 3rem;
+    flex: 1 0 auto;
+  }
+
+  &__message {
+    display: flex;
+    @include tablet() {
+      flex-direction: column;
+    }
+
+    & p,
+    & ul {
+      width: 50%;
+      flex: 0 1 auto;
+      margin: 0;
+      @include tablet() {
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+
+    & ul {
+      list-style: none;
+    }
+
+    & li {
+      margin-bottom: 1.5rem;
+      position: relative;
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -2rem;
+        top: .7rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background-color: #43c7b6;
+      }
+    }
+  }
+}
+
+.index__video-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.index__video {
+  height: 100%;
+}
+
+.index {
+  .certificates-block__certificate {
+    max-height: none;
+    flex: 1 1 auto;
+  }
+  
+  .certificates-block {
+    background: rgba(173, 173, 173, .28);
+    padding: 5rem 0 7rem;
+  }
+
+  .certificates-block__title {
+    font-size: 4.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.our-doctors {
+  padding: 6rem 0;
+}
+
+.our-doctors__title {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.our-doctors__doctors-list {
+  display: flex;
+  padding: 0;
+
+  & .doctor-preview {
+    margin-bottom: 0;
+    border: none;
+
+    &__main {
+      border: none;
+    }
+  }
+
+  & .doctor-preview__image {
+    width: auto;
+    height: auto;
+  }
+}
+
+.recent-articles__title {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.recent-articles__show-more {
+  display: block;
+  text-align: center;
+}
+
+.contacts {
+  display: flex;
+  @include tablet() {
+    flex-direction: column;
+  }
+  &__map {
+    width: 66.6%;
+    min-height: 50rem;
+    @include tablet() {
+      width: 100%;
+    }
+  }
+  &__main {
+    width: 33.4%;
+    padding: 4rem 9rem 4rem 4rem;
+    @include desktop() {
+      padding: 4rem;
+    }
+    @include tablet() {
+      text-align: center;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 4.8rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  &__info:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

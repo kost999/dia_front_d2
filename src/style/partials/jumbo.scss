@@ -27,6 +27,10 @@
   &__certificates {
     padding: 2rem 0 1rem;
   }
+
+  &__title {
+    position: relative;
+  }
 }
 
 .jumbotron_clinic {
@@ -35,6 +39,49 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+
+  & .jumbotron__content {
+    padding-top: 8rem;
+  }
+
+  & .jumbotron__title {
+    margin-bottom: 6rem;
+    position: relative;
+    padding-left: 1rem;
+
+    @include tablet() {
+      margin: 2rem 0 3rem;
+    }
+
+    @include mobile() {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: calc(60% - 2px);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #43c7b6;
+    }
+  }
+}
+
+.jumbotron_prices {
+  padding: 10rem 0 5rem;
+  background-image: url(../img/price.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+
+  & .container {
+    position: relative;
+  }
 }
 
 .jumbotron_index {
@@ -48,6 +95,11 @@
 
   &::before {
     content: normal;
+  }
+
+  & .features-wrapper {
+    position: relative;
+    z-index: 1;
   }
 }
 

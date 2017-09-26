@@ -1,8 +1,13 @@
-@@include('./template/pagetop.html', {"title":"ДИАДЕНТ","class":"index"})
+@@include('./template/pagetop.html', {"title":"ДИАДЕНТ","class":"index", "script": "<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript'></script>"})
 @@include('./template/header.html')
 
 <main class="main">
   <div class="jumbotron jumbotron_index">
+    <div class="index__video-container">
+      <video autoplay class="index__video" poster="img/jumbo-index.jpg" muted="true" loop="true">
+        <source src="img/vid/762534952.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="features-wrapper">
       <div class="container">
         <div class="ind-features">
@@ -64,7 +69,7 @@
       <div class="about-us__title">О клинике</div>
       <div class="about-us__content">
         <div class="about-us__image">
-          <img src="" alt="">
+          <img src="img/about.jpg" alt="">
         </div>
         <div class="about-us__message">
           <p>
@@ -88,34 +93,36 @@
         </div>
       </div>
     </div>
-
-    <div class="certificates-block">
+  </div>
+  <div class="certificates-block">
+    <div class="container">
       <div class="certificates-block__title">
         Сертификаты
       </div>
       <div class="certificates-block__certificates">
         <div class="certificates-block__certificate">
-          <img src="" alt="">
+          <img src="img/doc-certificate1.jpg" alt="">
         </div>
         <div class="certificates-block__certificate">
-          <img src="" alt="">
+          <img src="img/doc-certificate2.jpg" alt="">
         </div>
         <div class="certificates-block__certificate">
-          <img src="" alt="">
+          <img src="img/doc-certificate3.jpg" alt="">
         </div>
         <div class="certificates-block__certificate">
-          <img src="" alt="">
+          <img src="img/doc-certificate4.jpg" alt="">
         </div>
         <div class="certificates-block__certificate">
-          <img src="" alt="">
+          <img src="img/doc-certificate5.jpg" alt="">
         </div>
         <div class="certificates-block__certificate">
-          <img src="" alt="">
+          <img src="img/doc-certificate6.jpg" alt="">
         </div>
       </div>
     </div>
-
-    <div class="our-doctors">
+  </div>
+  <div class="our-doctors">
+    <div class="container">
       <div class="our-doctors__title">
         Наши врачи
       </div>
@@ -123,139 +130,134 @@
         <div class="doctors-list__item doctor-preview">
           <div class="doctor-preview__main">
             <div class="doctor-preview__image">
-              <img src="" alt="">
+              <img src="img/doctor1.jpg" alt="">
             </div>
             <div class="doctor-preview__name">
               Денисов Александр Юрьевич
             </div>
             <span class="doctor-preview__specialty">
-            Врач-ортодонт
-          </span>
+          Врач-ортодонт
+        </span>
           </div>
         </div>
-
         <div class="doctors-list__item doctor-preview">
           <div class="doctor-preview__main">
             <div class="doctor-preview__image">
-              <img src="" alt="">
+              <img src="img/doctor2.jpg" alt="">
             </div>
             <div class="doctor-preview__name">
               Денисов Александр Юрьевич
             </div>
             <span class="doctor-preview__specialty">
-            Врач-ортодонт
-          </span>
+          Врач-ортодонт
+        </span>
           </div>
         </div>
-
         <div class="doctors-list__item doctor-preview">
           <div class="doctor-preview__main">
             <div class="doctor-preview__image">
-              <img src="" alt="">
+              <img src="img/doctor1.jpg" alt="">
             </div>
             <div class="doctor-preview__name">
               Денисов Александр Юрьевич
             </div>
             <span class="doctor-preview__specialty">
-            Врач-ортодонт
-          </span>
+              Врач-ортодонт
+            </span>
           </div>
         </div>
-
         <div class="doctors-list__item doctor-preview">
           <div class="doctor-preview__main">
             <div class="doctor-preview__image">
-              <img src="" alt="">
+              <img src="img/doctor2.jpg" alt="">
             </div>
             <div class="doctor-preview__name">
               Денисов Александр Юрьевич
             </div>
             <span class="doctor-preview__specialty">
-            Врач-ортодонт
-          </span>
+          Врач-ортодонт
+        </span>
           </div>
         </div>
-
         <div class="doctors-list__item doctor-preview">
           <div class="doctor-preview__main">
             <div class="doctor-preview__image">
-              <img src="" alt="">
+              <img src="img/doctor1.jpg" alt="">
             </div>
             <div class="doctor-preview__name">
               Денисов Александр Юрьевич
             </div>
             <span class="doctor-preview__specialty">
-            Врач-ортодонт
-          </span>
+              Врач-ортодонт
+            </span>
           </div>
         </div>
       </div>
-      <a href="#" class="our-doctors__show-more">Подробнее о врачах</a>
     </div>
-
-    <div class="gallery">
-      <div class="gallery__title">Галерея</div>
-      <div class="gallery__images masonry">
-        <div class="masonry__row">
-          <div class="masonry__column_3">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+  </div>
+  <div class="gallery">
+    <div class="gallery__title">Галерея</div>
+    <div class="gallery__images masonry">
+      <div class="masonry__row">
+        <div class="masonry__column_3">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
-          <div class="masonry__column_1">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
-          <div class="masonry__column_1">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
         </div>
-        <div class="masonry__row">
-          <div class="masonry__column_2">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+        <div class="masonry__column_1">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
-          <div class="masonry__column_1">
-            <div class="masonry__item gallery__image">
-              <img src="" alt="">
-            </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+        </div>
+        <div class="masonry__column_1">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
           </div>
         </div>
       </div>
-      <a href="#" class="gallery__show-more">Открыть галерею</a>
+      <div class="masonry__row">
+        <div class="masonry__column_2">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+        </div>
+        <div class="masonry__column_1">
+          <div class="masonry__item gallery__image">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-
+    <a href="#" class="gallery__show-more">Открыть галерею</a>
+  </div>
+  <div class="container">
     <div class="recent-arcticles">
       <div class="recent-articles__title">
         Последние новости
       </div>
       <div class="recent-articles__articles-list articles-list">
-        <div class="row">
+        <div class="articles-list__content">
           <div class="articles-list__item article">
             <div class="article__image">
               <img src="img/article-list-item.jpg" alt="">
@@ -325,91 +327,19 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="articles-list__item article">
-            <div class="article__image">
-              <img src="img/article-list-item.jpg" alt="">
-            </div>
-            <div class="article__content">
-              <h2 class="article__title">Заголовок новости</h2>
-              <p class="article__message">
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они
-                в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
-                и обеспечивает ее всеми необходимыми правилами.
-              </p>
-              <div class="article__date date">
-                <span class="date__day">25</span>
-                <span class="date__month">мая</span>
-              </div>
-            </div>
-          </div>
-          <div class="articles-list__item article">
-            <div class="article__image">
-              <img src="img/article-list-item.jpg" alt="">
-            </div>
-            <div class="article__content">
-              <h2 class="article__title">Заголовок новости</h2>
-              <p class="article__message">
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они
-                в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
-                и обеспечивает ее всеми необходимыми правилами.
-              </p>
-              <div class="article__date date">
-                <span class="date__day">25</span>
-                <span class="date__month">мая</span>
-              </div>
-            </div>
-          </div>
-          <div class="articles-list__item article">
-            <div class="article__image">
-              <img src="img/article-list-item.jpg" alt="">
-            </div>
-            <div class="article__content">
-              <h2 class="article__title">Заголовок новости</h2>
-              <p class="article__message">
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они
-                в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
-                и обеспечивает ее всеми необходимыми правилами.
-              </p>
-              <div class="article__date date">
-                <span class="date__day">25</span>
-                <span class="date__month">мая</span>
-              </div>
-            </div>
-          </div>
-          <div class="articles-list__item article">
-            <div class="article__image">
-              <img src="img/article-list-item.jpg" alt="">
-            </div>
-            <div class="article__content">
-              <h2 class="article__title">Заголовок новости</h2>
-              <p class="article__message">
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они
-                в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
-                и обеспечивает ее всеми необходимыми правилами.
-              </p>
-              <div class="article__date date">
-                <span class="date__day">25</span>
-                <span class="date__month">мая</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="articles-list__load-more load-more">Загрузить ещё</a>
       </div>
       <a href="#" class="recent-articles__show-more">Все новости</a>
     </div>
-
-    <div class="contacts">
-      <div class="contacts__map"></div>
-      <div class="contacts__main">
-        <div class="contacts__title">Контакты</div>
-        <div class="contacts__address">г. Пушкино, Московский проспект, д. 27, подъезд №9 </div>
-        <div class="contacts__phone">+7 (925) 795-77-59 </div>
-        <div class="contacts__email">info@dia-dent.com</div>
-        <div class="contacts__image">
-          <img src="" alt="">
-        </div>
+  </div>
+  <div class="contacts">
+    <div class="contacts__map" id="map"></div>
+    <div class="contacts__main">
+      <div class="contacts__title">Контакты</div>
+      <div class="contacts__info contacts__info_address">г. Пушкино, Московский проспект, д. 27, подъезд №9 </div>
+      <div class="contacts__info contacts__info_phone">+7 (925) 795-77-59 </div>
+      <div class="contacts__info contacts__info_email">info@dia-dent.com</div>
+      <div class="contacts__info contacts__info_image">
+        <img src="img/contacts__info.jpg" alt="">
       </div>
     </div>
   </div>

@@ -1,11 +1,24 @@
+.article {
+  & .header {
+    position: relative;
+  }
+}
+
 .article-full {
   display: flex;
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+  @include mobile {
+    flex-direction: column;
+  }
 
   &__slider {
     flex: 1 1 50%;
-    margin-right: 40px;
+    margin-right: 4rem;
+    @include mobile {
+      flex: 1 1 auto;
+      margin-right: 0;
+    }
 
     & img {
       display: none;
