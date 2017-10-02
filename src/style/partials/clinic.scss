@@ -1,6 +1,7 @@
 .video {
   position: relative;
   height: 58.4rem;
+  margin-bottom: 3rem;
   @include mobile() {
     height: calc(100vw * 0.56);
   }

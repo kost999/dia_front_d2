@@ -75,7 +75,9 @@
 }
 
 .index__video {
+  object-fit: fill;
   height: 100%;
+  width: 100vw;
 }
 
 .index {
@@ -165,5 +167,24 @@
   }
   &__info:not(:last-child) {
     margin-bottom: 3rem;
+  }
+}
+
+.gallery__show-more,
+.recent-articles__show-more {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.show-more {
+  display: inline-block;
+  padding: 1.5rem 3.3rem;
+  border: 1px solid #58cebf;
+  color: #58cebf;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }

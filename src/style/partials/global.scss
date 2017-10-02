@@ -26,6 +26,25 @@ footer,
   left: 0;
 }
 
+.socials {
+  display: flex;
+  align-items: center;
+  & .social {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+  &__fb {
+    background-image: url(../img/icons/icon-facebook.svg);
+    margin-right: 1rem;
+  }
+  &__inst {
+    background-image: url(../img/icons/icon-instagram.png);
+  }
+}
+
 .btn {
   padding: 1.5rem 5rem;
 }
