@@ -81,6 +81,14 @@
 }
 
 .article {
+  transition: all .3s ease;
+  text-decoration: none;
+  color: #353535;
+
+  &:hover,
+  &:focus {
+    border-color: #58cebf;
+  }
 
   &__date {
     position: absolute;
