@@ -63,16 +63,21 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     @include mobile {
       flex-direction: column;
     }
   }
 
   &__item {
-    flex: 1 1 auto;
-    width: 21%;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 25%;
     margin: 0 2rem 4rem;
     border: 1px solid #d8d8d8;
+    @include tablet {
+      width: 25%;
+    }
     @include mobile {
       width: auto;
       margin: 0 0 2rem;

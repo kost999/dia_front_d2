@@ -19,6 +19,12 @@
     width: 30%;
     margin-right: 3rem;
     flex: 1 0 auto;
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   &__message {
@@ -72,6 +78,9 @@
   left: 0;
   height: 100%;
   width: 100%;
+  @include mobile {
+    display: none;
+  }
 }
 
 .index__video {
@@ -114,6 +123,7 @@
   & .doctor-preview {
     margin-bottom: 0;
     border: none;
+    display: flex!important;
 
     &__main {
       border: none;
