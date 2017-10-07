@@ -9,6 +9,9 @@ body {
   min-height: 100%;
   position: relative;
   padding-bottom: 4.5rem;
+  @include tablet {
+    padding-bottom: 0;
+  }
 }
 
 body {
@@ -24,6 +27,9 @@ footer,
   right: 0;
   bottom: 0;
   left: 0;
+  @include tablet {
+    position: static;
+  }
 }
 
 .socials {
@@ -53,6 +59,7 @@ footer,
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 header,
@@ -99,14 +106,34 @@ img {
 .footer .container {
   display: flex;
   justify-content: space-between;
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer__contacts {
+  @include tablet {
+    order: 1;
+  }
   display: flex;
 }
 
 .footer__address {
   margin-right: 5px;
+}
+
+.footer__copyrights {
+  @include tablet {
+    order: 2;
+  }
+}
+
+.footer__socials {
+  @include tablet {
+    order: 3;
+    margin-bottom: 2rem;
+  }
 }
 
 .l_back {

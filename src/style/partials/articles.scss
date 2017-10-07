@@ -72,11 +72,11 @@
   &__item {
     box-sizing: border-box;
     flex: 0 0 auto;
-    width: 25%;
-    margin: 0 2rem 4rem;
+    width: 23%;
+    margin: 0 1% 4rem;
     border: 1px solid #d8d8d8;
     @include tablet {
-      width: 25%;
+      width: 23%;
     }
     @include mobile {
       width: auto;

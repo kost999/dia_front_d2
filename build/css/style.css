@@ -945,7 +945,8 @@ footer,
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 20px;
+  position: relative; }
 
 header,
 .header {
@@ -1063,8 +1064,8 @@ img {
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-    width: 25%;
-    margin: 0 2rem 4rem;
+    width: 23%;
+    margin: 0 1% 4rem;
     border: 1px solid #d8d8d8; }
 
 .article {
@@ -1452,6 +1453,9 @@ img {
     font-size: 7.2rem;
     color: #ffffff; }
 
+.certificates-block .arrow {
+  margin-top: 4.5rem; }
+
 .certificates-block__certificates {
   display: -ms-flexbox;
   display: flex; }
@@ -1482,6 +1486,37 @@ img {
     left: 0;
     top: 0;
     background-color: #43c7b6; }
+
+.arrow {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer; }
+  .arrow_r {
+    background-image: url(../img/icons/arrow_r.svg);
+    left: calc(100% - 1rem); }
+  .arrow_l {
+    background-image: url(../img/icons/arrow_l.svg);
+    right: calc(100% - 1rem); }
+  .arrow_d {
+    width: 100%;
+    height: 3rem;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../img/icons/arrow_d.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; }
 
 .features {
   display: -ms-flexbox;
@@ -2558,6 +2593,11 @@ img {
   display: none; }
 
 @media (max-width: 1280px) {
+    .arrow {
+      position: static;
+      display: inline-block; }
+    .arrow-container {
+      text-align: center; }
     .feature__icon {
       padding: 3rem;
       width: 15rem;
@@ -2568,8 +2608,28 @@ img {
         padding: 4rem; } }
 
 @media (max-width: 1024px) {
+    body {
+      padding-bottom: 0; }
+    footer,
+    .footer {
+      position: static; }
+    .footer .container {
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: center;
+          align-items: center; }
+    .footer__contacts {
+      -ms-flex-order: 1;
+          order: 1; }
+  .footer__copyrights {
+    -ms-flex-order: 2;
+        order: 2; }
+  .footer__socials {
+    -ms-flex-order: 3;
+        order: 3;
+    margin-bottom: 2rem; }
       .articles-list__item {
-        width: 25%; }
+        width: 23%; }
     .slogan {
       text-transform: none; }
       .main-navigation__link {

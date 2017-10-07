@@ -1,9 +1,17 @@
 $(document).ready(function () {
+
   $('.menu-toggle').on('click', function() {
     $('.main-navigation').toggleClass('open');
     $('.menu-toggle__icon').toggleClass('open');
   });
 
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 600);
+  });
 
   //  Tabs
 
@@ -37,9 +45,8 @@ $(document).ready(function () {
     $('#video').attr('src', videoSrc);
   });
 
-  if($('.js_slick-features') && window.innerWidth > 1024) {
+  if($('.js_slick-features') && $(window).width() < 1024) {
     $('.js_slick-features').slick({
-      slidesToShow: 4,
       responsive: [
         {
           breakpoint: 1024,
@@ -66,21 +73,20 @@ $(document).ready(function () {
 
   if ($('.js_slick-doctors')) {
     $('.js_slick-doctors').slick({
-      dots: true,
+      dots: false,
       arrows: true,
       infinite: true,
       speed: 300,
       slidesToShow: 5,
       slidesToScroll: 1,
+      prevArrow: $('.our-doctors .arrow_l'),
+      nextArrow: $('.our-doctors .arrow_r'),
       responsive: [
         {
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-            arrows: true
           }
         },
         {
@@ -88,13 +94,13 @@ $(document).ready(function () {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true,
-            arrows: true
           }
         }
       ]
     });
   }
+
+
 
   if ($('.js_slick-certificates')) {
     $('.js_slick-certificates').each(function() {
@@ -106,6 +112,8 @@ $(document).ready(function () {
         slidesToShow: 6,
         slidesToScroll: 1,
         variableWidth: true,
+        prevArrow: $('.certificates-block .arrow_l'),
+        nextArrow: $('.certificates-block .arrow_r'),
         responsive: [
           {
             breakpoint: 1024,
@@ -134,7 +142,7 @@ $(document).ready(function () {
     });
   }
 
-  if (ymaps) {
+  if (typeof ymaps !== 'undefined') {
     ymaps.ready(init);
     var myMap,
       myPlacemark;
@@ -150,11 +158,16 @@ $(document).ready(function () {
         hintContent: 'Диадент!',
         balloonContent: 'Московский проспект, 27'
       }, {
-        preset: 'islands#redDotIcon'
+        // preset: 'islands#redDotIcon'
+        iconLayout: 'default#image',
+        iconImageHref: '../img/icons/placemark.png',
+        iconImageSize: [120, 120],
+        iconImageOffset: [-60, -120]
       });
 
       myMap.geoObjects.add(myPlacemark);
       myMap.behaviors.disable('scrollZoom');
     }
   }
+  $(window).resize();
 });

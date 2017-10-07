@@ -1,5 +1,9 @@
 .certificates-block {
 
+  &  .arrow {
+    margin-top: 4.5rem;
+  }
+
   &__certificates {
     display: flex;
   }
@@ -39,6 +43,54 @@
       left: 0;
       top: 0;
       background-color: #43c7b6;
+    }
+  }
+}
+
+.arrow {
+  width: 3.0rem;
+  height: 3.0rem;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  @include desktop {
+    position: static;
+    display: inline-block;
+  }
+
+  &_r {
+    background-image: url(../img/icons/arrow_r.svg);
+    left: calc(100% - 1rem);
+  }
+
+  &_l {
+    background-image: url(../img/icons/arrow_l.svg);
+    right: calc(100% - 1rem);
+  }
+
+  &_d {
+    width: 100%;
+    height: 3rem;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../img/icons/arrow_d.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &-container {
+    @include desktop {
+      text-align: center;
     }
   }
 }
