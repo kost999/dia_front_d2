@@ -100,6 +100,54 @@
   & .features-wrapper {
     position: relative;
     z-index: 1;
+
+    & .arrow-container {
+      display: none;
+
+      @include mobile {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    & .arrow {
+      background: none;
+      @include mobile {
+        position: absolute;
+      }
+
+      &.arrow_l {
+        @include mobile {
+          left: 3rem;
+          right: auto;
+        }
+        &::before {
+          content: '\2190';
+        }
+      }
+
+      &.arrow_r {
+        @include mobile {
+          left: auto;
+          right: 3rem;
+        }
+        &::before {
+          content: '\2192';
+        }
+      }
+      &::before {
+        color: #fff;
+        font-size: 2.4rem;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
   }
 }
 

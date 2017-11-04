@@ -4,6 +4,7 @@
 
 .gallery__row {
   display: flex;
+  flex-wrap: wrap;
   @include mobile {
     flex-direction: column;
   }
@@ -69,4 +70,7 @@
   font-size: 4.8rem;
   text-align: center;
   margin-bottom: 3rem;
+  @include mobile {
+    font-size: 3.6rem;
+  }
 }

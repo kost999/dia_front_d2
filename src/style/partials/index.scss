@@ -6,6 +6,9 @@
     font-size: 4.8rem;
     text-align: center;
     margin: 1rem 0 3rem;
+    @include mobile {
+      font-size: 3.6rem;
+    }
   }
 
   &__content {
@@ -67,6 +70,10 @@
   }
 }
 
+.slick-track {
+  display: flex;
+}
+
 .index__video-container {
   box-sizing: border-box;
   display: flex;
@@ -92,7 +99,7 @@
 .index {
   .certificates-block__certificate {
     max-height: none;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
   }
   
   .certificates-block {
@@ -104,21 +111,35 @@
     font-size: 4.8rem;
     text-align: center;
     margin-bottom: 3rem;
+    @include mobile {
+      font-size: 3.6rem;
+    }
   }
 }
 
 .our-doctors {
   padding: 6rem 0;
+  @include mobile {
+    padding: 4rem 0 1rem;
+  }
+
+  & .arrow-container {
+    display: none;
+  }
 }
 
 .our-doctors__title {
   font-size: 4.8rem;
   text-align: center;
+  @include mobile {
+    font-size: 3.6rem;
+  }
 }
 
 .our-doctors__doctors-list {
   display: flex;
   padding: 0;
+  justify-content: center;
 
   & .doctor-preview {
     margin-bottom: 0;
@@ -128,17 +149,25 @@
     &__main {
       border: none;
     }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 
   & .doctor-preview__image {
-    width: auto;
-    height: auto;
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto 1.5rem;
   }
 }
 
 .recent-articles__title {
   font-size: 4.8rem;
   text-align: center;
+  @include mobile {
+    font-size: 3.6rem;
+  }
 }
 
 .recent-articles__show-more {
@@ -174,7 +203,22 @@
     font-size: 4.8rem;
     text-align: center;
     margin-bottom: 5rem;
+    @include mobile {
+      font-size: 3.6rem;
+    }
   }
+
+  &__info_phone,
+  &__info_email {
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
   &__info:not(:last-child) {
     margin-bottom: 3rem;
   }

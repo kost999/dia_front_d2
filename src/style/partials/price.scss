@@ -6,6 +6,10 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__tab-controls-item {
@@ -49,6 +53,9 @@
     order: 1;
     margin-top: 0;
     margin-bottom: 0;
+    @include mobile {
+      max-width: 80%;
+    }
   }
 
   &__item-description {
@@ -59,6 +66,10 @@
   &__price {
     margin-left: auto;
     order: 2;
+    @include mobile {
+      margin-top: 2px;
+      max-width: 20%;
+    }
   }
 }
 

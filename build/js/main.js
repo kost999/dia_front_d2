@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('.menu-toggle__icon').toggleClass('open');
   });
 
-  $(document).on('click', 'a[href^="#"]', function (event) {
+  $(document).on('click', 'a[href^="#"]:not(.menu-toggle, .video__play)', function (event) {
     event.preventDefault();
 
     $('html, body').animate({
@@ -38,40 +38,59 @@ $(document).ready(function () {
   }
 
   //  Youtube video
-  var videoSrc = 'https://www.youtube.com/embed/EXS_sMYdqco?rel=0&showinfo=0';
+  var videoSrc = 'https://www.youtube.com/embed/EXS_sMYdqco?rel=0&showinfo=0&enablejsapi=1';
   $('.video__play').on('click', function(e) {
     e.preventDefault();
     $('.video__cover').hide();
     $('#video').attr('src', videoSrc);
+    $(this).toggle();
   });
 
   if($('.js_slick-features') && $(window).width() < 1024) {
     $('.js_slick-features').slick({
+
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: false,
+      arrows: true,
+      prevArrow: $('.features-wrapper .arrow_l'),
+      nextArrow: $('.features-wrapper .arrow_r'),
+
       responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-            arrows: true
-          }
-        },
+        // {
+        //   breakpoint: 1024,
+        //   settings: {
+        //     slidesToShow: 3,
+        //     slidesToScroll: 1,
+        //     infinite: false,
+        //     dots: false,
+        //     arrows: false,
+        //     prevArrow: $('.features-wrapper .arrow_l'),
+        //     nextArrow: $('.features-wrapper .arrow_r'),
+        //   }
+        // },
         {
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            infinite: true,
             dots: true,
-            arrows: true
           }
         }
       ]
     });
   }
 
-  if ($('.js_slick-doctors')) {
+  var maxDoctorsListItems = 5;
+
+  if ($(window).width() < 1024) maxDoctorsListItems = 3;
+  if ($(window).width() < 768) maxDoctorsListItems = 1;
+
+
+  if ($('.js_slick-doctors') && $('.doctors-list__item').length > maxDoctorsListItems) {
+    $('.our-doctors .arrow-container').show();
     $('.js_slick-doctors').slick({
       dots: false,
       arrows: true,
@@ -160,14 +179,16 @@ $(document).ready(function () {
       }, {
         // preset: 'islands#redDotIcon'
         iconLayout: 'default#image',
-        iconImageHref: '../img/icons/placemark.png',
-        iconImageSize: [120, 120],
-        iconImageOffset: [-60, -120]
+        iconImageHref: '/local/templates/dia_d2/img/icons/placemark.png',
+        iconImageSize: [80, 80],
+        iconImageOffset: [-40, -80]
       });
 
       myMap.geoObjects.add(myPlacemark);
       myMap.behaviors.disable('scrollZoom');
+      setTimeout(function() {
+        myMap.container.fitToViewport();
+      }, 4000);
     }
   }
-  $(window).resize();
 });
