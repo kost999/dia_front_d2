@@ -5,6 +5,7 @@
 @import "tools/slick-theme";
 @import "tools/variables";
 @import "tools/mixins";
+@import "tools/fancybox";
 @import "partials/global";
 @import "partials/articles";
 @import "partials/navigation";
@@ -17,4 +18,4 @@
 @import "partials/doctor-preview";
 @import "partials/index";
 @import "partials/gallery";
-@import "../../bower_components/fancybox/dist/jquery.fancybox.css";
+@import "partials/prod-diff";
