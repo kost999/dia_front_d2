@@ -1,14 +1,19 @@
 .video {
-  position: relative;
-  height: 58.4rem;
-  margin-bottom: 3rem;
-  @include mobile() {
-    height: calc(100vw * 0.56);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  @include mobile {
+    display: none;
   }
 
-  &__container {
+  &__player {
+    object-fit: fill;
     height: 100%;
-    width: 100%;
+    width: 100vw;
   }
 
   &__cover {
@@ -81,3 +86,4 @@
     }
   }
 }
+

@@ -37,14 +37,28 @@ $(document).ready(function () {
     tabContents.filter(tabId).addClass('active');
   }
 
-  //  Youtube video
-  var videoSrc = 'https://www.youtube.com/embed/EXS_sMYdqco?rel=0&showinfo=0&enablejsapi=1';
-  $('.video__play').on('click', function(e) {
-    e.preventDefault();
-    $('.video__cover').hide();
-    $('#video').attr('src', videoSrc);
-    $(this).toggle();
-  });
+  if ($('.video')) {
+      var video = document.querySelector('video');
+      $('.video')
+          .on('click', '.video__play', function(e) {
+              e.preventDefault();
+              $('.video__cover').hide();
+              if (video.paused) {
+                  video.play();
+                  $('.video__play').hide();
+              } else {
+                  video.pause();
+                  $('.video__play').show();
+              }
+          })
+          .on('click', 'video', function(e) {
+              if(!video.paused && $('.video__play').css('display') === 'none') {
+                  video.pause();
+                  $('.video__play').show();
+              }
+          });
+  }
+
 
   if($('.js_slick-features') && $(window).width() < 1024) {
     $('.js_slick-features').slick({

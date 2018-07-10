@@ -1628,7 +1628,8 @@ html {
 body {
   min-height: 100%;
   position: relative;
-  padding-bottom: 4.5rem; }
+  padding-bottom: 4.5rem;
+  box-sizing: border-box; }
 
 body {
   font-family: "open_sans", sans-serif;
@@ -1733,6 +1734,12 @@ img {
     background-image: url(../img/icons/icon-implant.png); }
   .icon.icon-tooth {
     background-image: url(../img/icons/icon-tooth.png); }
+
+.link_black {
+  color: #353535;
+  text-decoration: none; }
+  .link_black:hover, .link_black:focus {
+    text-decoration: underline; }
 
 .jumbotron_news {
   height: 360px;
@@ -2030,12 +2037,20 @@ img {
     opacity: 1; } }
 
 .video {
-  position: relative;
-  height: 58.4rem;
-  margin-bottom: 3rem; }
-  .video__container {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%; }
+  .video__player {
+    object-fit: fill;
     height: 100%;
-    width: 100%; }
+    width: 100vw; }
   .video__cover {
     width: 100%;
     height: 100%;
@@ -2489,7 +2504,8 @@ img {
     margin-bottom: 5rem; }
   .contacts__info_phone, .contacts__info_email {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #353535; }
     .contacts__info_phone:hover, .contacts__info_phone:focus, .contacts__info_email:hover, .contacts__info_email:focus {
       text-decoration: underline; }
   .contacts__info:not(:last-child) {
@@ -2813,7 +2829,7 @@ img {
         margin-top: 2px;
         max-width: 20%; }
     .video {
-      height: calc(100vw * 0.56); }
+      display: none; }
       .video__title {
         display: none; }
       .video__play-icon {
@@ -2894,7 +2910,9 @@ img {
     .gallery__column {
       width: 100%; }
     .gallery__title {
-      font-size: 3.6rem; } }
+      font-size: 3.6rem; }
+    .doctors .doctor-preview__main {
+      max-width: none; } }
 
 @media (max-width: 700px) and (min-width: 480px) {
     .grid__col[class*="grid__col--m-"] {

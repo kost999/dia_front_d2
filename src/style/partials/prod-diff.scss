@@ -8,7 +8,10 @@
 .doctors .doctor-preview__main {
   float: none;
   max-width: 25%;
-  box-sizing: border-box
+  box-sizing: border-box;
+  @include mobile() {
+    max-width: none;
+  }
 }
 
 .doctors .doctor-preview__content {
