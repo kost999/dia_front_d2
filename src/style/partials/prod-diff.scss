@@ -17,7 +17,10 @@
 .doctors .doctor-preview__content {
   float: none;
   box-sizing: border-box;
-  max-width: 75%
+  max-width: 75%;
+  @include mobile() {
+    max-width: none;
+  }
 }
 
 .doctor-preview .certificates-block {
@@ -52,6 +55,9 @@
   position: absolute;
   top: 3rem;
   left: 1.4rem
+}
+.doctor-preview .certificates-block .tns-controls [data-controls=next] {
+  transform: rotate(-45deg);
 }
 
 .doctor-preview .certificates-block__certificate:not(:last-child) {

@@ -1,4 +1,4 @@
-@@include('./template/pagetop.html', {"title":"Клиника","class":"", "script": ""})
+@@include('./template/pagetop.html', {"title":"Клиника","class":"clinic", "script": ""})
 @@include('./template/header.html')
 <main class="main">
   <div class="jumbotron jumbotron_clinic">
@@ -19,16 +19,20 @@
         </p>
         <hr>
         <div class="jumbotron__certificates certificates-block">
-          <div class="certificates-block__certificates">
+          <div class="certificates-block__certificates js_slick-certificates">
             <div class="certificates-block__certificate">
-              <img src="img/certificate.png" alt="">
+              <a href="img/doc-certificate4.jpg" data-fancybox="gallery"><img src="img/doc-certificate4.jpg" alt=""></a>
             </div>
             <div class="certificates-block__certificate">
-              <img src="img/certificate.png" alt="">
+              <a href="img/doc-certificate5.jpg" data-fancybox="gallery"><img src="img/doc-certificate5.jpg" alt=""></a>
             </div>
             <div class="certificates-block__certificate">
-              <img src="img/certificate.png" alt="">
+              <a href="img/doc-certificate6.jpg" data-fancybox="gallery"><img src="img/doc-certificate6.jpg" alt=""></a>
             </div>
+          </div>
+          <div class="arrow-container">
+            <div class="arrow arrow_l"></div>
+            <div class="arrow arrow_r"></div>
           </div>
         </div>
       </div>
@@ -67,8 +71,8 @@
   <div class="video">
     <div class="video__cover"></div>
     <video class="video__player">
-      <source src="vid/762534952.webm" type="video/webm">
-      <source src="vid/762534952.mp4" type="video/mp4">
+      <source src="img/vid/762534952.webm" type="video/webm">
+      <source src="img/vid/762534952.mp4" type="video/mp4">
       Ваш браузер не поддерживает данное видео :с
     </video>
     <a href="#" class="video__play">

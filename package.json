@@ -35,5 +35,8 @@
     "jquery": "^3.3.1",
     "run-sequence": "^1.2.2",
     "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "tiny-slider": "^2.8.0"
   }
 }

@@ -6,6 +6,7 @@
   overflow: hidden;
   height: 100vh;
   width: 100%;
+  position: relative;
   @include mobile {
     display: none;
   }
@@ -87,3 +88,14 @@
   }
 }
 
+.clinic .jumbotron__certificates .arrow {
+    &_r {
+      background-image: url(../img/icons/arrow_r_white.svg);
+      left: calc(100% - 1rem);
+    }
+
+    &_l {
+      background-image: url(../img/icons/arrow_l_white.svg);
+      right: calc(100% - 1rem);
+    }
+}

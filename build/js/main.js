@@ -175,6 +175,29 @@ $(document).ready(function () {
     });
   }
 
+  var r = document.querySelector(".js_slick_doc-certificates");
+  if (r) {
+    tns({
+        container: r,
+        items: 5,
+        slideBy: 1,
+        gutter: 20,
+        controlsText: ["", ""],
+        nav: !1,
+        responsive: {
+            320: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1024: {
+                items: 5
+            }
+        }
+    })
+  }
+
   if (typeof ymaps !== 'undefined') {
     ymaps.ready(init);
     var myMap,
