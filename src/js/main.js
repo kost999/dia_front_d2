@@ -39,22 +39,26 @@ $(document).ready(function () {
 
   if ($('.video')) {
       var video = document.querySelector('video');
+      video.addEventListener('ended', function() {
+          $('.video__play').fadeIn();
+          $('.video__cover').fadeIn();
+      }, false);
       $('.video')
           .on('click', '.video__play', function(e) {
               e.preventDefault();
-              $('.video__cover').hide();
+              $('.video__cover').fadeOut();
               if (video.paused) {
                   video.play();
-                  $('.video__play').hide();
+                  $('.video__play').fadeOut();
               } else {
                   video.pause();
-                  $('.video__play').show();
+                  $('.video__play').fadeIn();
               }
           })
           .on('click', 'video', function(e) {
               if(!video.paused && $('.video__play').css('display') === 'none') {
                   video.pause();
-                  $('.video__play').show();
+                  $('.video__play').fadeIn();
               }
           });
   }
