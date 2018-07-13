@@ -37,7 +37,7 @@ $(document).ready(function () {
     tabContents.filter(tabId).addClass('active');
   }
 
-  if ($('.video')) {
+  if ($('.video').length) {
       var video = document.querySelector('video');
       video.addEventListener('ended', function() {
           $('.video__play').fadeIn();
