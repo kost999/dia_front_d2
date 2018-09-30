@@ -1,86 +1,152 @@
-@@include('./template/pagetop.html', {"title":"Клиника","class":"", "script": ""})
+@@include('./template/pagetop.html', {"title":"Клиника","class":"clinic", "script": ""})
 @@include('./template/header.html')
 <main class="main">
-  <div class="jumbotron jumbotron_clinic">
+    <div class="jumbotron jumbotron_clinic">
+        <div class="container">
+            <div class="jumbotron__content">
+                <h1 class="jumbotron__title">Клиника</h1>
+                <p class="jumbotron__message">
+                    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана.
+                    <br>
+                    <br>
+                    Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                    <br>
+                    <br>
+                    Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже
+                    всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.
+                    <br>
+                    <br>
+                    Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+                    грамматики.
+                </p>
+                <hr>
+                <div class="jumbotron__certificates certificates-block">
+                    <div class="certificates-block__certificates js_slick-certificates">
+                        <div class="certificates-block__certificate">
+                            <a href="img/doc-certificate4.jpg" data-fancybox="gallery"><img
+                                    src="img/doc-certificate4.jpg" alt=""></a>
+                        </div>
+                        <div class="certificates-block__certificate">
+                            <a href="img/doc-certificate5.jpg" data-fancybox="gallery"><img
+                                    src="img/doc-certificate5.jpg" alt=""></a>
+                        </div>
+                        <div class="certificates-block__certificate">
+                            <a href="img/doc-certificate6.jpg" data-fancybox="gallery"><img
+                                    src="img/doc-certificate6.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="arrow-container">
+                        <div class="arrow arrow_l"></div>
+                        <div class="arrow arrow_r"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
-      <div class="jumbotron__content">
-        <h1 class="jumbotron__title">Клиника</h1>
-        <p class="jumbotron__message">
-          Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
-          <br>
-          <br>
-          Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
-          <br>
-          <br>
-          Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.
-          <br>
-          <br>
-          Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.
-        </p>
-        <hr>
-        <div class="jumbotron__certificates certificates-block">
-          <div class="certificates-block__certificates">
-            <div class="certificates-block__certificate">
-              <img src="img/certificate.png" alt="">
+        <div class="features">
+            <div class="features__item feature">
+                <div class="feature__icon">
+                    <i class="icon icon-parodontology"></i>
+                </div>
+                <div class="feature__title">Пародонтология</div>
             </div>
-            <div class="certificates-block__certificate">
-              <img src="img/certificate.png" alt="">
+            <div class="features__item feature">
+                <div class="feature__icon">
+                    <i class="icon icon-hygiene"></i>
+                </div>
+                <div class="feature__title">Профессиональная гигиена
+                    и отбеливание
+                </div>
             </div>
-            <div class="certificates-block__certificate">
-              <img src="img/certificate.png" alt="">
+            <div class="features__item feature">
+                <div class="feature__icon">
+                    <i class="icon icon-implant"></i>
+                </div>
+                <div class="feature__title">Имплантация</div>
             </div>
-          </div>
+            <div class="features__item feature">
+                <div class="feature__icon">
+                    <i class="icon icon-tooth"></i>
+                </div>
+                <div class="feature__title">Профессиональная гигиена
+                    и отбеливание
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    
+    <div class="video">
+        <div class="video__cover"></div>
+        <video class="video__player">
+            <source src="img/vid/762534952.webm" type="video/webm">
+            <source src="img/vid/762534952.mp4" type="video/mp4">
+            Ваш браузер не поддерживает данное видео :с
+        </video>
+        <a href="#" class="video__play">
+            <i class="video__play-icon icon icon-play"></i>
+            <div class="video__title">Смотреть видео</div>
+        </a>
     </div>
-  <div class="container">
-    <div class="features">
-      <div class="features__item feature">
-        <div class="feature__icon">
-          <i class="icon icon-parodontology"></i>
+    <div class="gallery">
+        <div class="gallery__title">Галерея</div>
+        @@include("./template/gallery.html")
+    </div>
+    <div class="gray-block">
+        <div class="container">
+            <div class="text-block__title">
+                Время работы клиники
+            </div>
+            <div class="text-block__content">
+                <p><b>Пн - Пт:</b> 9:00 - 20:00</p>
+                <p><b>Сб:</b> 9:00 - 17:00</p>
+                <p><b>Вс:</b> Закрыто <b>)-:</b></p>
+            </div>
         </div>
-        <div class="feature__title">Пародонтология</div>
-      </div>
-      <div class="features__item feature">
-          <div class="feature__icon">
-            <i class="icon icon-hygiene"></i>
-          </div>
-        <div class="feature__title">Профессиональная гигиена
-          и отбеливание</div>
-      </div>
-      <div class="features__item feature">
-          <div class="feature__icon">
-            <i class="icon icon-implant"></i>
-          </div>
-        <div class="feature__title">Имплантация</div>
-      </div>
-      <div class="features__item feature">
-          <div class="feature__icon">
-            <i class="icon icon-tooth"></i>
-          </div>
-        <div class="feature__title">Профессиональная гигиена
-          и отбеливание</div>
-      </div>
     </div>
-  </div>
-  <div class="video">
-    <div class="video__cover"></div>
-    <!--<video class="video__container" controls>-->
-      <!--<source src="img/vid/AMEOW-ZING%2050%20Box%20Cat%20Maze!.webm" type="video/webm">-->
-      <!--<source src="img/vid/AMEOW-ZING%2050%20Box%20Cat%20Maze!.mp4" type="video/mp4">-->
-      <!--Ваш браузер не поддерживает данное видео :с-->
-    <!--</video>-->
-    <iframe id="video" class="video__container" src="" frameborder="0" allowfullscreen></iframe>
-    <a href="#" class="video__play">
-      <i class="video__play-icon icon icon-play"></i>
-      <div class="video__title">Смотреть видео</div>
-    </a>
-  </div>
-  <div class="gallery">
-    <div class="gallery__title">Галерея</div>
-    @@include("./template/gallery.html")
-  </div>
+    <div class="white-block">
+        <div class="container">
+            <div class="text-block__title">
+                Оплата
+            </div>
+            <div class="text-block__content">
+                <p>В нашей клинике помимо наличных принимаются к оплате пластиковые карты систем Visa, Mastercard, Мир —
+                    дебетовые и кредитные.</p>
+                <p>Вы так же можете заранее выписать счет и оплатить его безналичным перечислением.</p>
+            </div>
+        </div>
+    </div>
+    <div class="gray-block">
+        <div class="container">
+            <div class="text-block__title">
+                Юридическая информация
+            </div>
+            <div class="text-block__content">
+                <h2>Юридический адрес</h2>
+                <p>Московская обл, г.Пушкино, пр-кт.Московский, д.27, пом.9, 141207</p>
+                <h2>Реквизиты компании</h2>
+                <ul class="gray-block__ul">
+                    <li><b>ОГРН</b> 1135038006916</li>
+                    <li><b>ИНН</b> 5038101046</li>
+                    <li><b>КПП</b> 503801001</li>
+                    <li><b>ОКПО</b> 23348013</li>
+                </ul>
+                <h2>Органы исполнительной власти и надзора</h2>
+                <h4>Министерство здравоохранения Московской области</h4>
+                <p>Адрес: Московская область, г. Красногорск, бульвар Строителей, д. 1</p>
+                <p>Телефон: (498) 602-03-01</p>
+                <h4>Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по
+                    Московской области</h4>
+                <p>Адрес: Московская область, г. Мытищи, ул. Семашко, дом 2</p>
+                <p>Телефон: (495) 586-10-78, (495) 586-12-87</p>
+                <h4>Территориальный отдел Управления Роспотребнадзора по Московской области в городе Ивантеевка,
+                    Пушкинском, Сергиево-Посадском районах</h4>
+                <p>Адрес: Московская область, г. Пушкино, ул. Горького, д. 3.</p>
+                <p>Телефон: 8 (496) 539-04-66</p>
+            </div>
+        </div>
+    </div>
 </main>
 @@include('./template/footer.html')
 @@include('./template/pagebottom.html')

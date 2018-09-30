@@ -10,6 +10,7 @@ body {
   min-height: 100%;
   position: relative;
   padding-bottom: 4.5rem;
+  box-sizing: border-box;
   @include tablet {
     padding-bottom: 0;
   }
@@ -177,5 +178,14 @@ img {
 
   &.icon-tooth {
     background-image: url(../img/icons/icon-tooth.png);
+  }
+}
+
+.link_black {
+  color: #353535;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }

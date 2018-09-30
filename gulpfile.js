@@ -154,9 +154,9 @@ var browSyncConfig = {
   logPrefix: 'diad'
 };
 
-// Tasks for browSync
+//Dev tasks
 
-gulp.task('serve', function () {
+gulp.task('start',['build', 'watch'], function () {
   browserSync(browSyncConfig);
 });
 
@@ -165,10 +165,6 @@ gulp.task('serve', function () {
 gulp.task('clean', function () {
   return del(path.clean);
 });
-
-//Dev tasks
-
-gulp.task('start', ['build', 'serve', 'watch']);
 
 // Default task
 gulp.task('default', ['start']);

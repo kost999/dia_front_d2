@@ -37,14 +37,32 @@ $(document).ready(function () {
     tabContents.filter(tabId).addClass('active');
   }
 
-  //  Youtube video
-  var videoSrc = 'https://www.youtube.com/embed/EXS_sMYdqco?rel=0&showinfo=0&enablejsapi=1';
-  $('.video__play').on('click', function(e) {
-    e.preventDefault();
-    $('.video__cover').hide();
-    $('#video').attr('src', videoSrc);
-    $(this).toggle();
-  });
+  if ($('.video').length) {
+      var video = document.querySelector('video');
+      video.addEventListener('ended', function() {
+          $('.video__play').fadeIn();
+          $('.video__cover').fadeIn();
+      }, false);
+      $('.video')
+          .on('click', '.video__play', function(e) {
+              e.preventDefault();
+              $('.video__cover').fadeOut();
+              if (video.paused) {
+                  video.play();
+                  $('.video__play').fadeOut();
+              } else {
+                  video.pause();
+                  $('.video__play').fadeIn();
+              }
+          })
+          .on('click', 'video', function(e) {
+              if(!video.paused && $('.video__play').css('display') === 'none') {
+                  video.pause();
+                  $('.video__play').fadeIn();
+              }
+          });
+  }
+
 
   if($('.js_slick-features') && $(window).width() < 1024) {
     $('.js_slick-features').slick({
@@ -161,6 +179,29 @@ $(document).ready(function () {
     });
   }
 
+  var r = document.querySelector(".js_slick_doc-certificates");
+  if (r) {
+    tns({
+        container: r,
+        items: 5,
+        slideBy: 1,
+        gutter: 20,
+        controlsText: ["", ""],
+        nav: !1,
+        responsive: {
+            320: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1024: {
+                items: 5
+            }
+        }
+    })
+  }
+
   if (typeof ymaps !== 'undefined') {
     ymaps.ready(init);
     var myMap,
@@ -179,7 +220,7 @@ $(document).ready(function () {
       }, {
         // preset: 'islands#redDotIcon'
         iconLayout: 'default#image',
-        iconImageHref: '/local/templates/dia_d2/img/icons/placemark.png',
+        iconImageHref: '/img/icons/placemark.png',
         iconImageSize: [80, 80],
         iconImageOffset: [-40, -80]
       });

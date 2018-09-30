@@ -1,14 +1,20 @@
 .video {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
   position: relative;
-  height: 58.4rem;
-  margin-bottom: 3rem;
-  @include mobile() {
-    height: calc(100vw * 0.56);
+  @include mobile {
+    display: none;
   }
 
-  &__container {
+  &__player {
+    object-fit: fill;
     height: 100%;
-    width: 100%;
+    width: 100vw;
   }
 
   &__cover {
@@ -79,5 +85,43 @@
     @include mobile() {
       margin-bottom: 0;
     }
+  }
+}
+
+.clinic .jumbotron__certificates .arrow {
+    &_r {
+      background-image: url(../img/icons/arrow_r.svg);
+      left: calc(100% - 1rem);
+    }
+
+    &_l {
+      background-image: url(../img/icons/arrow_l.svg);
+      right: calc(100% - 1rem);
+    }
+}
+
+.text-block__content {
+  text-align: center;
+}
+
+.gray-block {
+  background: rgba(173, 173, 173, .28);
+  padding: 5rem 0 7rem;
+}
+
+.gray-block__ul li {
+  display: block;
+}
+
+.white-block {
+  padding: 5rem 0 7rem;
+}
+
+.text-block__title {
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  @include mobile {
+    font-size: 3.6rem;
   }
 }
