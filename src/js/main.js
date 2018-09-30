@@ -220,7 +220,7 @@ $(document).ready(function () {
       }, {
         // preset: 'islands#redDotIcon'
         iconLayout: 'default#image',
-        iconImageHref: '/local/templates/dia_d2/img/icons/placemark.png',
+        iconImageHref: '/img/icons/placemark.png',
         iconImageSize: [80, 80],
         iconImageOffset: [-40, -80]
       });

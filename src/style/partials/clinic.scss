@@ -90,12 +90,38 @@
 
 .clinic .jumbotron__certificates .arrow {
     &_r {
-      background-image: url(../img/icons/arrow_r_white.svg);
+      background-image: url(../img/icons/arrow_r.svg);
       left: calc(100% - 1rem);
     }
 
     &_l {
-      background-image: url(../img/icons/arrow_l_white.svg);
+      background-image: url(../img/icons/arrow_l.svg);
       right: calc(100% - 1rem);
     }
+}
+
+.text-block__content {
+  text-align: center;
+}
+
+.gray-block {
+  background: rgba(173, 173, 173, .28);
+  padding: 5rem 0 7rem;
+}
+
+.gray-block__ul li {
+  display: block;
+}
+
+.white-block {
+  padding: 5rem 0 7rem;
+}
+
+.text-block__title {
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  @include mobile {
+    font-size: 3.6rem;
+  }
 }

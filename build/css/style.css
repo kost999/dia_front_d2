@@ -2222,12 +2222,30 @@ img {
     background-position: center center; }
 
 .clinic .jumbotron__certificates .arrow_r {
-  background-image: url(../img/icons/arrow_r_white.svg);
+  background-image: url(../img/icons/arrow_r.svg);
   left: calc(100% - 1rem); }
 
 .clinic .jumbotron__certificates .arrow_l {
-  background-image: url(../img/icons/arrow_l_white.svg);
+  background-image: url(../img/icons/arrow_l.svg);
   right: calc(100% - 1rem); }
+
+.text-block__content {
+  text-align: center; }
+
+.gray-block {
+  background: rgba(173, 173, 173, 0.28);
+  padding: 5rem 0 7rem; }
+
+.gray-block__ul li {
+  display: block; }
+
+.white-block {
+  padding: 5rem 0 7rem; }
+
+.text-block__title {
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 3rem; }
 
 .jumbotron {
   background-color: #f0f0f0;
@@ -2629,7 +2647,7 @@ img {
   .contacts__title {
     font-size: 4.8rem;
     text-align: center;
-    margin-bottom: 5rem; }
+    margin-bottom: 3rem; }
   .contacts__info_phone, .contacts__info_email {
     display: block;
     text-decoration: none;
@@ -2637,7 +2655,20 @@ img {
     .contacts__info_phone:hover, .contacts__info_phone:focus, .contacts__info_email:hover, .contacts__info_email:focus {
       text-decoration: underline; }
   .contacts__info:not(:last-child) {
+    margin-bottom: 1.6rem; }
+  .contacts .contacts__main p {
+    margin-top: 0; }
+  .contacts__email_phone__address {
+    width: 50%;
+    float: left;
     margin-bottom: 3rem; }
+  .contacts__work_time {
+    width: 50%;
+    float: right;
+    margin-bottom: 3rem;
+    text-align: right; }
+  .contacts__work_time h4 {
+    margin: 0 0 1.6rem 0; }
 
 .gallery__show-more,
 .recent-articles__show-more {
@@ -2708,7 +2739,7 @@ img {
 .gallery__title {
   font-size: 4.8rem;
   text-align: center;
-  margin-bottom: 3rem; }
+  margin: 3rem 0; }
 
 .certificates-block__certificate a {
   display: -ms-flexbox;
@@ -2965,6 +2996,8 @@ img {
         display: none; }
       .video__play-icon {
         margin-bottom: 0; }
+    .text-block__title {
+      font-size: 3.6rem; }
       .jumbotron_clinic .jumbotron__title {
         margin: 0; }
         .jumbotron_index .features-wrapper .arrow-container {
@@ -3035,6 +3068,11 @@ img {
       font-size: 3.6rem; }
       .contacts__title {
         font-size: 3.6rem; }
+      .contacts__email_phone__address {
+        width: 100%; }
+      .contacts__work_time {
+        width: 100%;
+        text-align: center; }
     .gallery__row {
       -ms-flex-direction: column;
           flex-direction: column; }

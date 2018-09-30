@@ -156,7 +156,7 @@ var browSyncConfig = {
 
 //Dev tasks
 
-gulp.task('serve',['build', 'watch'], function () {
+gulp.task('start',['build', 'watch'], function () {
   browserSync(browSyncConfig);
 });
 
