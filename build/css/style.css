@@ -2519,6 +2519,28 @@ img {
   .doctor-preview__intro {
     font-size: 1.4rem;
     margin-bottom: 3.5rem; }
+  .doctor-preview__doctor_schedule {
+    margin: 3.5rem 0 0 0; }
+    .doctor-preview__doctor_schedule__work_time_header {
+      font-size: 2rem;
+      padding-left: 1rem;
+      position: relative;
+      margin: 0.5rem 0 2.5rem 0;
+      float: none;
+      box-sizing: border-box; }
+    .doctor-preview__doctor_schedule__work_time_header:before {
+      content: '';
+      width: 3px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #43c7b6; }
+    .doctor-preview__doctor_schedule__work_time {
+      font-size: 1.4rem;
+      color: #c4c4c4;
+      margin: 0 0 0.2rem 0; }
 
 .about-us {
   padding: 4rem 0;
